@@ -1,0 +1,14 @@
+{
+    "nav": {
+        "about": "Informazioni",
+        "experience": "Esperienza",
+        "projects": "Progetti",
+        "contact": "Contattami"
+    },
+    "hero": {
+        "greeting": "Ciao, sono",
+        "role": "Full Stack Developer",
+        "download_cv": "Scarica CV",
+        "contact_me": "Contattami"
+    }
+}

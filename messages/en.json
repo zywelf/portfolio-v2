@@ -1,0 +1,14 @@
+{
+    "nav": {
+        "about": "About",
+        "experience": "experience",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hi, sono",
+        "role": "Full Stack Developer",
+        "download_cv": "Download CV",
+        "contact_me": "Contact me"
+    }
+}
