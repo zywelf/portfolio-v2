@@ -3,7 +3,8 @@
         "about": "About",
         "experience": "experience",
         "projects": "Projects",
-        "contact": "Contact"
+        "contact": "Contact",
+        "language": "EN"
     },
     "hero": {
         "greeting": "Hi, sono",
