@@ -15,6 +15,8 @@
     "about": {
         "title": "About me",
         "description": "2 years building production SaaS with React, Next.js and Django. Currently leveling up with Node.js and AWS. Remote-first, timezone-flexible, always learning.",
-        "skills_title": "Tech stack"
+        "skills_title": "Technologies",
+        "location": "Arezzo, Italy",
+        "availability": "Open to remote & relocation"
     }
 }

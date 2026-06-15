@@ -11,9 +11,12 @@ import {
     GitOriginal,
     AmazonwebservicesOriginalWordmark,
 } from "devicons-react";
+import { MapPin, Wifi } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React from "react";
 import { useTranslations } from "next-intl";
 import Section from "../layout/Section";
+import Link from "next/link";
 
 type Skill = {
     name: string;
@@ -98,6 +101,32 @@ export default function About() {
                 <p className="text-muted-foreground leading-relaxed">
                     {t("description")}
                 </p>
+                <div className="flex flex-col gap-3 mt-6">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <MapPin size={16} className="text-teal" />
+                        <span>{t("location")}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Wifi size={16} className="text-teal" />
+                        <span>{t("availability")}</span>
+                    </div>
+                    <div className="flex items-center gap-4 mt-2">
+                        <Link
+                            href="https://github.com/zywelf"
+                            target="_blank"
+                            className="text-muted-foreground hover:text-teal transition-colors ease-in-out duration-300"
+                        >
+                            <FaGithub size={30} />
+                        </Link>
+                        <Link
+                            href="https://linkedin.com/in/zywel-fankam"
+                            target="_blank"
+                            className="text-muted-foreground hover:text-teal transition-colors ease-in-out duration-300"
+                        >
+                            <FaLinkedin size={30} />
+                        </Link>
+                    </div>
+                </div>
             </div>
             <div className="border rounded-xl p-4 hover:border-teal transition-colors ease-in-out duration-300">
                 <h2 className="text-2xl font-bold text-foreground mb-6">
