@@ -7,9 +7,9 @@
         "language": "EN"
     },
     "hero": {
-        "greeting": "Hi, sono",
-        "role": "Full Stack Developer",
-        "download_cv": "Download CV",
-        "contact_me": "Contact me"
+        "title": "Full Stack Developer",
+        "subtitle": "Front to back, pixel to server.",
+        "description": "Hi, I'm Zywel — I build the Frontend you see and the Backend that powers it.",
+        "cta": "View my work"
     }
 }

@@ -1,10 +1,11 @@
 import Navbar from "@/components/layout/Navbar"
+import Hero from "@/components/sections/Hero"
 
 export default function LocalPage() {
     return (
-        <main>
+        <main className="min-h-screen bg-background">
             <Navbar />
-            <h1>Hello</h1>
+            <Hero />
         </main>
     )
 }
