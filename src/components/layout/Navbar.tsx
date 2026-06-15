@@ -3,12 +3,26 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
     const locale = useLocale();
     const pathname = usePathname();
     const router = useRouter();
     const t = useTranslations("nav");
+    const { resolvedTheme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        // eslint-disable-next-line
+        setMounted(true);
+    }, []);
+
+    const switchTheme = () => {
+        const newTheme = resolvedTheme === "dark" ? "light" : "dark";
+        setTheme(newTheme);
+    };
 
     const switchLanguage = () => {
         const newLocale = locale === "it" ? "en" : "it";
@@ -17,7 +31,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="flex bg-red-500">
+        <nav className="flex">
             <div>
                 <Link href="#about"> {t("about")} </Link>
             </div>
@@ -35,6 +49,13 @@ export default function Navbar() {
                     {t("language")}
                 </button>
             </div>
+            {mounted && (
+                <div>
+                    <button type="button" onClick={switchTheme}>
+                        {resolvedTheme === "dark" ? "☀️" : "🌙"}
+                    </button>
+                </div>
+            )}
         </nav>
     );
 }

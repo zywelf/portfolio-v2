@@ -1,11 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { JetBrains_Mono } from "next/font/google";
-
-const jetBrainsMono = JetBrains_Mono({
-    subsets: ["latin"],
-    variable: "--font-jetbrains",
-});
 
 type Props = {
     children: React.ReactNode;
@@ -17,12 +11,8 @@ export default async function LocaleLayout({ children, params }: Props) {
     const messages = await getMessages();
 
     return (
-        <html lang={locale} className={jetBrainsMono.variable}>
-            <body>
-                <NextIntlClientProvider messages={messages}>
-                    {children}
-                </NextIntlClientProvider>
-            </body>
-        </html>
+        <NextIntlClientProvider messages={messages}>
+            {children}
+        </NextIntlClientProvider>
     );
 }
