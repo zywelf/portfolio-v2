@@ -11,5 +11,10 @@
         "subtitle": "Front to back, pixel to server.",
         "description": "Hi, I'm Zywel — I build the Frontend you see and the Backend that powers it.",
         "cta": "View my work"
+    },
+    "about": {
+        "title": "About me",
+        "description": "2 years building production SaaS with React, Next.js and Django. Currently leveling up with Node.js and AWS. Remote-first, timezone-flexible, always learning.",
+        "skills_title": "Tech stack"
     }
 }

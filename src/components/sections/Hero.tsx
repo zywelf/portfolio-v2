@@ -1,11 +1,12 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import Section from "../layout/Section";
 
 export default function Hero() {
     const t = useTranslations("hero");
 
     return (
-        <section className="flex flex-col items-center justify-center min-h-screen text-center px-6 gap-6">
+        <Section id="hero" className="flex flex-col items-center justify-center min-h-screen text-center px-6 gap-6">
             <p className="text-sm text-teal-light uppercase tracking-widest">
                 {t("subtitle")}
             </p>
@@ -21,6 +22,6 @@ export default function Hero() {
             >
                 {t("cta")}
             </Link>
-        </section>
+        </Section>
     );
 }

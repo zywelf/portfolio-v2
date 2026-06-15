@@ -11,5 +11,10 @@
         "subtitle": "Dal frontend al backend, dal pixel al server.",
         "description": "Ciao, sono Zywel — costruisco il Frontend che vedi e il Backend che lo alimenta.",
         "cta": "Vedi i miei progetti"
+    },
+    "about": {
+        "title": "Chi sono",
+        "description": "2 anni a costruire SaaS in produzione con React, Next.js e Django. Attualmente mi sto espandendo su Node.js e AWS. Remote-first, flessibile sui fusi orari, sempre in crescita.",
+        "skills_title": "Tech stack"
     }
 }
