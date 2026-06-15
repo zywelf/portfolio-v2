@@ -55,7 +55,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-6 py-3 rounded-md backdrop-blur-md bg-background/70 border ${resolvedTheme === 'dark' ? 'border-white/10' : 'border-black/10'} shadow-lg w-auto gap-12`}>
+        <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-6 py-3 rounded-md backdrop-blur-md bg-background/70 border dark:border-white/10 border-black/10 shadow-lg w-auto gap-12">
             <span className="text-foreground font-semibold tracking-tight">
                 Zywel<span className="text-teal">.</span>
             </span>
