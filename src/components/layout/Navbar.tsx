@@ -6,6 +6,30 @@ import { useRouter, usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
+type NavItem = {
+    title: string;
+    href: string;
+};
+
+const navItems: NavItem[] = [
+    {
+        title: "about",
+        href: "#about",
+    },
+    {
+        title: "experience",
+        href: "#experience",
+    },
+    {
+        title: "projects",
+        href: "#projects",
+    },
+    {
+        title: "contact",
+        href: "#contact",
+    },
+];
+
 export default function Navbar() {
     const locale = useLocale();
     const pathname = usePathname();
@@ -31,31 +55,41 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="flex">
-            <div>
-                <Link href="#about"> {t("about")} </Link>
+        <nav className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-6 py-3 rounded-md backdrop-blur-md bg-background/70 border ${resolvedTheme === 'dark' ? 'border-white/10' : 'border-black/10'} shadow-lg w-auto gap-12`}>
+            <span className="text-foreground font-semibold tracking-tight">
+                Zywel<span className="text-teal">.</span>
+            </span>
+
+            <div className="flex items-center gap-8">
+                {navItems.map((item) => (
+                    <Link
+                        key={item.href}
+                        href={item.href}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                        {t(item.title)}
+                    </Link>
+                ))}
             </div>
-            <div>
-                <Link href="#experience"> {t("experience")} </Link>
-            </div>
-            <div>
-                <Link href="#projects"> {t("projects")} </Link>
-            </div>
-            <div>
-                <Link href="#contact"> {t("contact")} </Link>
-            </div>
-            <div>
-                <button type="button" onClick={switchLanguage}>
+
+            <div className="flex items-center gap-3">
+                <button
+                    type="button"
+                    onClick={switchLanguage}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
                     {t("language")}
                 </button>
-            </div>
-            {mounted && (
-                <div>
-                    <button type="button" onClick={switchTheme}>
+                {mounted && (
+                    <button
+                        type="button"
+                        onClick={switchTheme}
+                        className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
                         {resolvedTheme === "dark" ? "☀️" : "🌙"}
                     </button>
-                </div>
-            )}
+                )}
+            </div>
         </nav>
     );
 }
