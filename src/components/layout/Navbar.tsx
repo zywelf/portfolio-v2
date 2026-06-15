@@ -50,7 +50,8 @@ export default function Navbar() {
 
     const switchLanguage = () => {
         const newLocale = locale === "it" ? "en" : "it";
-        const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+        const cleanPath = pathname.split("#")[0];
+        const newPath = cleanPath.replace(`/${locale}`, `/${newLocale}`);
         router.push(newPath);
     };
 
