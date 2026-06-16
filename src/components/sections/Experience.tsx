@@ -19,6 +19,7 @@ import {
 import { useTranslations } from "next-intl";
 import TechBadge from "../ui/TechBadge";
 import Card from "../ui/Card";
+import SectionTitle from "../ui/SectionTitle";
 
 type ListTechnology = {
     name: string;
@@ -137,10 +138,10 @@ export default function Experience() {
 
     return (
         <Section id="experience">
-            <h2 className="text-2xl font-bold text-foreground mb-12">
+            <SectionTitle>
                 {t("title")}
-            </h2>
-            <div className="flex flex-col gap-12">
+            </SectionTitle>
+            <div className="flex flex-col gap-6">
                 {listExperience.map((job, index) => (
                     <Card key={`job-${index}`}>
                         {/* Header — ruolo, azienda, periodo */}

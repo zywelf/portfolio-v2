@@ -13,9 +13,23 @@
         "cta": "Vedi i miei progetti"
     },
     "about": {
-        "title": "Chi sono",
-        "description": "2 anni a costruire SaaS in produzione con React, Next.js e Django. Attualmente mi sto espandendo su Node.js e AWS. Remote-first, flessibile sui fusi orari, sempre in crescita.",
+        "title": "Informazioni",
+        "subtitle": "Chi sono",
+        "description": [
+            "Sono un Full Stack Web Developer specializzato nella progettazione e nello sviluppo di piattaforme SaaS B2B in ambiente di produzione.",
+            "Il mio approccio unisce l'ingegnerizzazione di architetture backend robuste alla creazione di interfacce utente fluide, data-driven e accessibili.",
+            "Ho oltre 2 anni di esperienza commerciale focalizzata su Component-Driven Architecture, ottimizzazione delle performance web (SSR/ISR) e gestione di flussi di dati complessi. Abituato a operare in team Agile (Scrum) veloci, dove la qualità del software viene garantita attraverso principi di Clean Code e Code Review costruttive.",
+            "Aperto al trasferimento internazionale e orientato alla crescita continua, con interesse crescente verso il mondo DevOps e le pratiche di ingegneria del software a larga scala."
+        ],
         "skills_title": "Tecnologie",
+        "languages_title": "Lingue",
+        "lang_italian_name": "Italiano",
+        "lang_italian_level": "Madrelingua",
+        "lang_english_name": "Inglese",
+        "lang_english_level": "Fluente",
+        "lang_french_name": "Francese",
+        "lang_french_level": "Base",
+        "contact_title": "Contatti",
         "location": "Arezzo, Italia",
         "availability": "Disponibile da remoto e al trasferimento"
     },

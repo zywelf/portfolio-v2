@@ -23,6 +23,7 @@ import Section from "../layout/Section";
 import Link from "next/link";
 import TechBadge from "../ui/TechBadge";
 import Card from "../ui/Card";
+import SectionTitle from "../ui/SectionTitle";
 
 type Skill = {
     name: string;
@@ -90,7 +91,7 @@ const aboutItems: SkillCategoty[] = [
             {
                 name: "MySQL",
                 icon: MysqlOriginal,
-            }
+            },
         ],
     },
     {
@@ -115,61 +116,120 @@ const aboutItems: SkillCategoty[] = [
 export default function About() {
     const t = useTranslations("about");
     return (
-        <Section id="about" className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <Section id="about">
+            <SectionTitle>
+                {t("title")}
+            </SectionTitle>
             <Card>
-                <h2 className="text-2xl font-bold text-foreground mb-4">
-                    {t("title")}
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                    {t("description")}
-                </p>
-                <div className="flex flex-col gap-3 mt-6">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <MapPin size={16} className="text-teal-light" />
-                        <span>{t("location")}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Wifi size={16} className="text-teal-light" />
-                        <span>{t("availability")}</span>
-                    </div>
-                    <div className="flex items-center gap-4 mt-2">
-                        <Link
-                            href="https://github.com/zywelf"
-                            target="_blank"
-                            className="text-muted-foreground hover:text-teal-light transition-colors ease-in-out duration-300"
-                        >
-                            <FaGithub size={30} />
-                        </Link>
-                        <Link
-                            href="https://linkedin.com/in/zywel-fankam"
-                            target="_blank"
-                            className="text-muted-foreground hover:text-teal-light transition-colors ease-in-out duration-300"
-                        >
-                            <FaLinkedin size={30} />
-                        </Link>
-                    </div>
+                {/* About me */}
+                <div className="flex flex-col gap-4">
+                    <h3 className="text-lg font-semibold text-foreground">
+                        {t("subtitle")}
+                    </h3>
+                    {(t.raw("description") as string[]).map(
+                        (paragraph, index) => (
+                            <p
+                                key={index}
+                                className="text-muted-foreground leading-relaxed"
+                            >
+                                {paragraph}
+                            </p>
+                        ),
+                    )}
                 </div>
-            </Card>
-            <Card>
-                <h2 className="text-2xl font-bold text-foreground mb-6">
-                    {t("skills_title")}
-                </h2>
-                {aboutItems.map((item) => (
-                    <div key={`category-${item.category}`} className="mb-4">
-                        <p className="text-xs text-muted-foreground uppercase tracking-widest mb-2">
-                            {item.category}
+
+                <hr className="border-white/10 my-2" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="flex flex-col gap-3">
+                        {/* Lingue */}
+                        <h3 className="text-lg font-semibold text-foreground">
+                            {t("languages_title")}
+                        </h3>
+                        <p className="text-sm">
+                            <span className="text-foreground">
+                                {t("lang_italian_name")}
+                            </span>
+                            <span className="text-muted-foreground">
+                                {" "}
+                                — {t("lang_italian_level")}
+                            </span>
                         </p>
-                        <div className="flex flex-wrap gap-2">
-                            {item.skills.map((skill) => (
-                                <TechBadge
-                                    key={`key-${skill.name}`}
-                                    icon={skill.icon}
-                                    name={skill.name}
-                                />
-                            ))}
+                        <p className="text-sm">
+                            <span className="text-foreground">
+                                {t("lang_english_name")}
+                            </span>
+                            <span className="text-muted-foreground">
+                                {" "}
+                                — {t("lang_english_level")}
+                            </span>
+                        </p>
+                        <p className="text-sm">
+                            <span className="text-foreground">
+                                {t("lang_french_name")}
+                            </span>
+                            <span className="text-muted-foreground">
+                                {" "}
+                                — {t("lang_french_level")}
+                            </span>
+                        </p>
+
+                        {/* Divisore */}
+                        <h3 className="text-lg font-semibold text-foreground mt-2">{t("contact_title")}</h3>
+
+                        {/* Location + Availability */}
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <MapPin size={16} className="text-teal" />
+                            <span>{t("location")}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                            <Wifi size={16} className="text-teal" />
+                            <span>{t("availability")}</span>
+                        </div>
+
+                        {/* Social */}
+                        <div className="flex items-center gap-4 mt-2">
+                            <a
+                                href="https://github.com/zywelf"
+                                target="_blank"
+                                className="text-muted-foreground hover:text-teal transition-colors"
+                            >
+                                <FaGithub size={24} />
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/zywel-fankam"
+                                target="_blank"
+                                className="text-muted-foreground hover:text-teal transition-colors"
+                            >
+                                <FaLinkedin size={24} />
+                            </a>
                         </div>
                     </div>
-                ))}
+                    {/* Technologies */}
+                    <div className="flex flex-col gap-4">
+                        <h3 className="text-lg font-semibold text-foreground">
+                            {t("skills_title")}
+                        </h3>
+                        {aboutItems.map((item) => (
+                            <div
+                                key={item.category}
+                                className="flex flex-col gap-2"
+                            >
+                                <p className="text-xs text-muted-foreground uppercase tracking-widest">
+                                    {item.category}
+                                </p>
+                                <div className="flex flex-wrap gap-2">
+                                    {item.skills.map((skill) => (
+                                        <TechBadge
+                                            key={skill.name}
+                                            name={skill.name}
+                                            icon={skill.icon}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </Card>
         </Section>
     );
