@@ -18,5 +18,22 @@
         "skills_title": "Tecnologie",
         "location": "Arezzo, Italia",
         "availability": "Disponibile da remoto e al trasferimento"
+    },
+    "experience": {
+        "title": "Esperienza",
+        "metriks_bullets": [
+            "Sviluppato e mantenuto Dbiz, piattaforma SaaS B2B per l'analisi dei dati aziendali",
+            "Realizzato dashboard data-driven e portali Investor Relations con React, Next.js e TypeScript",
+            "Progettato e implementato un CMS headless per documenti corporate con Django REST Framework",
+            "Configurato pipeline CI/CD su Bitbucket con deploy automatico su AWS",
+            "Containerizzazione dei servizi con Docker e collaborazione in sprint Agile Scrum con code review",
+            "Applicato standard di accessibilità WCAG su tutte le interfacce frontend",
+            "Lavorato in ambiente Agile Scrum con sprint planning, daily standup e retrospettive"
+        ],
+        "giaogiao_bullets": [
+            "Sviluppato interfacce web e mobile responsive per piattaforma di ordini digitali e chiosco self-service",
+            "Frontend con Vue.js, JavaScript, HTML5 e CSS in un team startup Agile di 3 persone",
+            "Consegnato funzionalità end-to-end seguendo metodologia Agile con cicli di iterazione brevi"
+        ]
     }
 }
