@@ -10,6 +10,10 @@ import {
     DockerOriginal,
     GitOriginal,
     AmazonwebservicesOriginalWordmark,
+    JavascriptOriginal,
+    Html5Original,
+    Css3Original,
+    MysqlOriginal,
 } from "devicons-react";
 import { MapPin, Wifi } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -17,6 +21,8 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import Section from "../layout/Section";
 import Link from "next/link";
+import TechBadge from "../ui/TechBadge";
+import Card from "../ui/Card";
 
 type Skill = {
     name: string;
@@ -41,6 +47,10 @@ const aboutItems: SkillCategoty[] = [
                 icon: NextjsOriginal,
             },
             {
+                name: "JavaScript",
+                icon: JavascriptOriginal,
+            },
+            {
                 name: "TypeScript",
                 icon: TypescriptOriginal,
             },
@@ -51,6 +61,14 @@ const aboutItems: SkillCategoty[] = [
             {
                 name: "Tailwind CSS",
                 icon: TailwindcssOriginal,
+            },
+            {
+                name: "HTML",
+                icon: Html5Original,
+            },
+            {
+                name: "CSS",
+                icon: Css3Original,
             },
         ],
     },
@@ -69,6 +87,10 @@ const aboutItems: SkillCategoty[] = [
                 name: "Python",
                 icon: PythonOriginal,
             },
+            {
+                name: "MySQL",
+                icon: MysqlOriginal,
+            }
         ],
     },
     {
@@ -94,7 +116,7 @@ export default function About() {
     const t = useTranslations("about");
     return (
         <Section id="about" className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="border rounded-xl p-4 hover:border-teal transition-colors ease-in-out duration-300">
+            <Card>
                 <h2 className="text-2xl font-bold text-foreground mb-4">
                     {t("title")}
                 </h2>
@@ -103,32 +125,32 @@ export default function About() {
                 </p>
                 <div className="flex flex-col gap-3 mt-6">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <MapPin size={16} className="text-teal" />
+                        <MapPin size={16} className="text-teal-light" />
                         <span>{t("location")}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Wifi size={16} className="text-teal" />
+                        <Wifi size={16} className="text-teal-light" />
                         <span>{t("availability")}</span>
                     </div>
                     <div className="flex items-center gap-4 mt-2">
                         <Link
                             href="https://github.com/zywelf"
                             target="_blank"
-                            className="text-muted-foreground hover:text-teal transition-colors ease-in-out duration-300"
+                            className="text-muted-foreground hover:text-teal-light transition-colors ease-in-out duration-300"
                         >
                             <FaGithub size={30} />
                         </Link>
                         <Link
                             href="https://linkedin.com/in/zywel-fankam"
                             target="_blank"
-                            className="text-muted-foreground hover:text-teal transition-colors ease-in-out duration-300"
+                            className="text-muted-foreground hover:text-teal-light transition-colors ease-in-out duration-300"
                         >
                             <FaLinkedin size={30} />
                         </Link>
                     </div>
                 </div>
-            </div>
-            <div className="border rounded-xl p-4 hover:border-teal transition-colors ease-in-out duration-300">
+            </Card>
+            <Card>
                 <h2 className="text-2xl font-bold text-foreground mb-6">
                     {t("skills_title")}
                 </h2>
@@ -139,20 +161,16 @@ export default function About() {
                         </p>
                         <div className="flex flex-wrap gap-2">
                             {item.skills.map((skill) => (
-                                <span
+                                <TechBadge
                                     key={`key-${skill.name}`}
-                                    className="flex items-center gap-2 px-3 py-1 rounded-full border dark:border-white/10 border-black/10 text-muted-foreground hover:border-teal hover:text-teal transition-colors duration-300 ease-in-out w-fit cursor-default"
-                                >
-                                    <skill.icon size={18} />
-                                    <span className="text-sm">
-                                        {skill.name}
-                                    </span>
-                                </span>
+                                    icon={skill.icon}
+                                    name={skill.name}
+                                />
                             ))}
                         </div>
                     </div>
                 ))}
-            </div>
+            </Card>
         </Section>
     );
 }

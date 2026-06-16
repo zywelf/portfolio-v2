@@ -52,7 +52,7 @@ export default function Navbar() {
         const newLocale = locale === "it" ? "en" : "it";
         const cleanPath = pathname.split("#")[0];
         const newPath = cleanPath.replace(`/${locale}`, `/${newLocale}`);
-        router.push(newPath);
+        router.push(newPath, { scroll: false });
     };
 
     return (

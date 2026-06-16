@@ -18,5 +18,22 @@
         "skills_title": "Technologies",
         "location": "Arezzo, Italy",
         "availability": "Open to remote & relocation"
+    },
+    "experience": {
+        "title": "Experience",
+        "metriks_bullets": [
+            "Built and maintained Dbiz, a B2B SaaS platform for business data analytics used by enterprise clients",
+            "Developed data-driven dashboards and Investor Relations portals with React, Next.js and TypeScript",
+            "Designed and implemented a headless CMS for corporate documents using Django REST Framework",
+            "Established CI/CD pipelines on Bitbucket with automated deploy to AWS, reducing release time",
+            "Containerized services with Docker and collaborated in Agile Scrum sprints with code reviews",
+            "Applied WCAG accessibility standards across all frontend interfaces",
+            "Worked in Agile Scrum environment with sprint planning, daily standups and retrospectives"
+        ],
+        "giaogiao_bullets": [
+            "Built responsive web and mobile interfaces for a digital ordering platform and self-service kiosk",
+            "Developed frontend with Vue.js, JavaScript, HTML5 and CSS in a fast-paced 3-person startup team",
+            "Delivered features end-to-end following Agile methodology with short iteration cycles"
+        ]
     }
 }
