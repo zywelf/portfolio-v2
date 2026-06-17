@@ -165,12 +165,12 @@ export default function Experience() {
                                 (bullet, index) => (
                                     <li
                                         key={`list-${index}`}
-                                        className="flex items-start gap-2 text-sm text-muted-foreground"
+                                        className="flex items-center gap-2 text-sm text-muted-foreground"
                                     >
-                                        <span className="text-teal mt-1">
+                                        <span className="text-teal mt-1 shrink-0">
                                             ▹
                                         </span>
-                                        {bullet}
+                                        <span className="flex-1">{bullet}</span>
                                     </li>
                                 ),
                             )}

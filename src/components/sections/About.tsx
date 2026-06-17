@@ -141,7 +141,7 @@ export default function About() {
                 <hr className="border-white/10 my-2" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="flex flex-col gap-3">
-                        {/* Lingue */}
+                        {/* Languages */}
                         <h3 className="text-lg font-semibold text-foreground">
                             {t("languages_title")}
                         </h3>
@@ -173,7 +173,7 @@ export default function About() {
                             </span>
                         </p>
 
-                        {/* Divisore */}
+                        {/* Devider */}
                         <h3 className="text-lg font-semibold text-foreground mt-2">{t("contact_title")}</h3>
 
                         {/* Location + Availability */}
@@ -188,20 +188,20 @@ export default function About() {
 
                         {/* Social */}
                         <div className="flex items-center gap-4 mt-2">
-                            <a
+                            <Link
                                 href="https://github.com/zywelf"
                                 target="_blank"
-                                className="text-muted-foreground hover:text-teal transition-colors"
+                                className="text-muted-foreground hover:text-teal-light transition-colors"
                             >
                                 <FaGithub size={24} />
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="https://linkedin.com/in/zywel-fankam"
                                 target="_blank"
-                                className="text-muted-foreground hover:text-teal transition-colors"
+                                className="text-muted-foreground hover:text-teal-light transition-colors"
                             >
                                 <FaLinkedin size={24} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* Technologies */}
