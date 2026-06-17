@@ -5,11 +5,9 @@ import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-
-type NavItem = {
-    title: string;
-    href: string;
-};
+import { NavItem } from "@/types";
+import MobileMenu from "./MobileMenu";
+import { IT, GB } from "country-flag-icons/react/3x2";
 
 const navItems: NavItem[] = [
     {
@@ -37,6 +35,7 @@ export default function Navbar() {
     const t = useTranslations("nav");
     const { resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
+    //const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         // eslint-disable-next-line
@@ -61,7 +60,7 @@ export default function Navbar() {
                 Zywel<span className="text-teal-light">.</span>
             </span>
 
-            <div className="flex items-center gap-8">
+            <div className="md:flex hidden items-center gap-8">
                 {navItems.map((item) => (
                     <Link
                         key={item.href}
@@ -73,13 +72,18 @@ export default function Navbar() {
                 ))}
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="md:flex hidden items-center gap-3">
                 <button
                     type="button"
                     onClick={switchLanguage}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                    {t("language")}
+                    {locale === "it" ? (
+                        <IT className="w-4 h-4" />
+                    ) : (
+                        <GB className="w-4 h-4" />
+                    )}
+                    <span>{t("language")}</span>
                 </button>
                 {mounted && (
                     <button
@@ -90,6 +94,16 @@ export default function Navbar() {
                         {resolvedTheme === "dark" ? "☀️" : "🌙"}
                     </button>
                 )}
+            </div>
+            <div className="md:hidden flex items-center">
+                <MobileMenu
+                    locale={locale}
+                    resolvedTheme={resolvedTheme ?? "dark"}
+                    onSwitchLanguage={switchLanguage}
+                    onSwitchTheme={switchTheme}
+                    mounted={mounted}
+                    navItems={navItems}
+                />
             </div>
         </nav>
     );
