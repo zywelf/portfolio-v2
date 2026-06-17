@@ -20,18 +20,14 @@ import { useTranslations } from "next-intl";
 import TechBadge from "../ui/TechBadge";
 import Card from "../ui/Card";
 import SectionTitle from "../ui/SectionTitle";
-
-type ListTechnology = {
-    name: string;
-    icon: React.ComponentType<{ size?: number }>;
-};
+import { Technology } from "@/types";
 
 type Experience = {
     company: string;
     role: string;
     duration: string;
     description: string;
-    technologies: ListTechnology[];
+    technologies: Technology[];
 };
 
 const listExperience: Experience[] = [

@@ -49,5 +49,11 @@
             "Frontend con Vue.js, JavaScript, HTML5 e CSS in un team startup Agile di 3 persone",
             "Consegnato funzionalità end-to-end seguendo metodologia Agile con cicli di iterazione brevi"
         ]
+    },
+    "projects": {
+        "title": "Progetti",
+        "portfolio_v2_description": "Questo stesso portfolio — costruito con Next.js, TypeScript, Tailwind CSS e next-intl per il supporto bilingue. Include dark/light mode, SSG e un'architettura completamente component-driven.",
+        "portfolio_v1_description": "Il mio primo portfolio da developer, costruito da zero con HTML, CSS e JavaScript vanilla. Implementato un sistema bilingue custom (IT/EN) con data attributes, prima di imparare le librerie i18n dedicate — la base che ha portato alla versione Next.js che stai visitando ora.",
+        "flutter_description": "Progetto di Human-Computer Interaction sul benessere digitale — un'app ibrida che combina un blocco schermo anti-distrazione con la riproduzione musicale. Ricerca e adattamento dell'implementazione dopo aver scoperto restrizioni a livello di sistema operativo, con pivot verso una modalità focus a timer mantenendo l'accesso alle chiamate di emergenza."
     }
 }
