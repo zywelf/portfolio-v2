@@ -24,15 +24,11 @@ import Link from "next/link";
 import TechBadge from "../ui/TechBadge";
 import Card from "../ui/Card";
 import SectionTitle from "../ui/SectionTitle";
-
-type Skill = {
-    name: string;
-    icon: React.ComponentType<{ size?: number }>;
-};
+import { Technology } from "@/types";
 
 type SkillCategoty = {
     category: string;
-    skills: Skill[];
+    skills: Technology[];
 };
 
 const aboutItems: SkillCategoty[] = [
