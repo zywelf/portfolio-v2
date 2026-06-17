@@ -150,7 +150,7 @@ export default function Experience() {
                                     {job.company}
                                 </span>
                             </div>
-                            <span className="text-muted-foreground text-sm">
+                            <span className="text-muted-foreground md:text-sm text-xs whitespace-nowrap">
                                 {job.duration}
                             </span>
                         </div>
