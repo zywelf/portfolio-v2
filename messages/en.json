@@ -55,5 +55,16 @@
         "portfolio_v2_description": "This very portfolio — built with Next.js, TypeScript, Tailwind CSS and next-intl for bilingual support. Features dark/light mode, SSG and a fully component-driven architecture.",
         "portfolio_v1_description": "My first developer portfolio, built from scratch with vanilla HTML, CSS and JavaScript. Implemented a custom bilingual system (IT/EN) using data attributes before learning dedicated i18n libraries — the foundation that led to the Next.js version you're viewing now.",
         "flutter_description": "A Human-Computer Interaction project exploring digital wellbeing — a hybrid focus app combining a distraction-blocking lock screen with music playback. Researched and adapted the implementation after discovering OS-level restrictions on screen-lock control, pivoting to a timer-based focus mode with emergency access preserved."
+    },
+    "contact": {
+        "title": "Contact Me",
+        "fullname": "Full name",
+        "email": "Email",
+        "cellphone": "Cellphone",
+        "message": "Message",
+        "send": "Send",
+        "sending": "Sending...",
+        "success": "Message sent succefully!",
+        "error": "Something is wrong, try it again!"
     }
 }
