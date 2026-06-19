@@ -46,9 +46,9 @@ export default function MobileMenu({
                         Zywel<span className="text-teal-light">.</span>
                     </span>
                 </SheetTitle>
-                {navItems.map((item, index) => (
+                {navItems.map((item) => (
                     <Link
-                        key={`item-${index}`}
+                        key={item.title}
                         href={item.href}
                         onClick={closeSheet}
                         className="text-sm text-muted-foreground hover:text-teal-light transition-colors"

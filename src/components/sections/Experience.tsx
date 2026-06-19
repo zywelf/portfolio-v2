@@ -138,8 +138,8 @@ export default function Experience() {
                 {t("title")}
             </SectionTitle>
             <div className="flex flex-col gap-6">
-                {listExperience.map((job, index) => (
-                    <Card key={`job-${index}`}>
+                {listExperience.map((job) => (
+                    <Card key={`job-${job.company}`}>
                         {/* Header — ruolo, azienda, periodo */}
                         <div className="flex items-start justify-between">
                             <div>
@@ -158,9 +158,9 @@ export default function Experience() {
                         {/* Bullet points */}
                         <ul className="flex flex-col gap-2">
                             {(t.raw(job.description) as string[]).map(
-                                (bullet, index) => (
+                                (bullet) => (
                                     <li
-                                        key={`list-${index}`}
+                                        key={bullet}
                                         className="flex items-center gap-2 text-sm text-muted-foreground"
                                     >
                                         <span className="text-teal mt-1 shrink-0">
@@ -174,9 +174,9 @@ export default function Experience() {
 
                         {/* Tecnologie */}
                         <div className="flex flex-wrap gap-2 mt-2">
-                            {job.technologies.map((item, index) => (
+                            {job.technologies.map((item) => (
                                 <TechBadge
-                                    key={`technology-${index}`}
+                                    key={item.name}
                                     icon={item.icon}
                                     name={item.name}
                                     size={20}
