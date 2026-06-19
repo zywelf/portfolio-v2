@@ -77,7 +77,7 @@ export default function Contact() {
                     </label>
                     <input
                         required
-                        className={`${inputClassName}`}
+                        className={`${inputClassName} w-full md:w-1/2`}
                         id="fullName"
                         type="text"
                         value={formData.fullName}
@@ -93,7 +93,7 @@ export default function Contact() {
                     </label>
                     <input
                         required
-                        className={`${inputClassName}`}
+                        className={`${inputClassName} w-full md:w-1/2`}
                         id="email"
                         type="text"
                         value={formData.email}
@@ -107,7 +107,7 @@ export default function Contact() {
                     </label>
                     <input
                         required
-                        className={`${inputClassName}`}
+                        className={`${inputClassName} w-full md:w-1/2`}
                         id="cellphone"
                         type="text"
                         value={formData.cellphone}
