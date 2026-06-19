@@ -123,9 +123,9 @@ export default function About() {
                         {t("subtitle")}
                     </h3>
                     {(t.raw("description") as string[]).map(
-                        (paragraph, index) => (
+                        (paragraph) => (
                             <p
-                                key={index}
+                                key={paragraph}
                                 className="text-muted-foreground leading-relaxed"
                             >
                                 {paragraph}

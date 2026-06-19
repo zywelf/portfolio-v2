@@ -91,8 +91,8 @@ export default function Projects() {
         <Section id="projects">
             <SectionTitle>{t("title")}</SectionTitle>
             <div className="flex flex-col gap-6">
-                {itemProject.map((item, index) => (
-                    <Card key={`project-${index}`}>
+                {itemProject.map((item) => (
+                    <Card key={item.title}>
                         <div className="flex items-center justify-between">
                             <h3 className="text-xl font-semibold text-foreground">
                                 {item.title}
@@ -107,9 +107,9 @@ export default function Projects() {
                         </div>
                         <p className="text-muted-foreground leading-relaxed mb-2">{t(item.description)}</p>
                         <div className="flex flex-wrap gap-2 mt-2">
-                            {item.technologies.map((bullet, index) => (
+                            {item.technologies.map((bullet) => (
                                 <TechBadge
-                                    key={`tech-${index}`}
+                                    key={bullet.name}
                                     name={bullet.name}
                                     icon={bullet.icon}
                                 />
