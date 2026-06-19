@@ -26,7 +26,7 @@ export default function Contact() {
     const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
     const inputClassName =
-        "bg-transparent border dark:border-white/10 border-black/10 rounded-lg px-4 py-2 text-foreground text-sm focus:outline-none focus:border-teal-light transition-colors mb-4";
+        "bg-transparent border dark:border-white/10 border-black/10 rounded-lg px-4 py-2 text-foreground text-sm focus:outline-none focus:border-teal-light dark:focus:border-teal-light transition-colors mb-4";
 
     const handleChange = (field: keyof FormData, value: string) => {
         setFormData({ ...formData, [field]: value });
@@ -73,11 +73,11 @@ export default function Contact() {
                         className="text-sm text-muted-foreground mb-1"
                         htmlFor="fullName"
                     >
-                        {t("fullname")}
+                        {t("fullname")}*
                     </label>
                     <input
                         required
-                        className={`${inputClassName} w-full md:w-1/2`}
+                        className={`${inputClassName}`}
                         id="fullName"
                         type="text"
                         value={formData.fullName}
@@ -89,11 +89,11 @@ export default function Contact() {
                         className="text-sm text-muted-foreground mb-1"
                         htmlFor="email"
                     >
-                        {t("email")}
+                        {t("email")}*
                     </label>
                     <input
                         required
-                        className={`${inputClassName} w-full md:w-1/2`}
+                        className={`${inputClassName}`}
                         id="email"
                         type="text"
                         value={formData.email}
@@ -107,7 +107,7 @@ export default function Contact() {
                     </label>
                     <input
                         required
-                        className={`${inputClassName} w-full md:w-1/2`}
+                        className={`${inputClassName}`}
                         id="cellphone"
                         type="text"
                         value={formData.cellphone}
@@ -119,7 +119,7 @@ export default function Contact() {
                         className="text-sm text-muted-foreground mb-1"
                         htmlFor="message"
                     >
-                        {t("message")}
+                        {t("message")}*
                     </label>
                     <textarea
                         required
@@ -133,7 +133,7 @@ export default function Contact() {
 
                     <button
                         type="submit"
-                        className="mt-4 px-6 py-3 rounded-full border border-teal text-teal hover:bg-teal hover:text-black transition-colors self-start disabled:opacity-50"
+                        className="mt-4 px-6 py-3 rounded-full border border-teal-light text-teal-light hover:bg-teal-light hover:text-black transition-colors self-start disabled:opacity-50"
                         disabled={isLoading}
                     >
                         {isLoading ? (
