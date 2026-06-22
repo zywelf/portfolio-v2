@@ -15,6 +15,7 @@ import {
     Html5Original,
     Css3Original,
     MysqlOriginal,
+    PostgresqlOriginal
 } from "devicons-react";
 import { useTranslations } from "next-intl";
 import TechBadge from "../ui/TechBadge";
@@ -72,6 +73,10 @@ const listExperience: Experience[] = [
             {
                 name: "Django",
                 icon: DjangorestOriginal,
+            },
+            {
+                name: "Postgres",
+                icon: PostgresqlOriginal,
             },
             {
                 name: "Python",
