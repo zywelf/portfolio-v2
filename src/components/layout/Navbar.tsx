@@ -34,7 +34,6 @@ export default function Navbar() {
     const t = useTranslations("nav");
     const { resolvedTheme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
-    //const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         // eslint-disable-next-line

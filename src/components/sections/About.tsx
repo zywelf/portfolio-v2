@@ -14,6 +14,7 @@ import {
     Html5Original,
     Css3Original,
     MysqlOriginal,
+    PostgresqlOriginal
 } from "devicons-react";
 import { MapPin, Wifi } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -88,6 +89,10 @@ const aboutItems: SkillCategoty[] = [
                 name: "MySQL",
                 icon: MysqlOriginal,
             },
+            {
+                name: "PostgreSQL",
+                icon: PostgresqlOriginal,
+            }
         ],
     },
     {
