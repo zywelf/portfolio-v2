@@ -10,6 +10,11 @@ import {
     TypescriptOriginal,
     FlutterOriginal,
     DartOriginal,
+    NodejsOriginal,
+    ExpressOriginal,
+    PostgresqlOriginal,
+    PrismaOriginal,
+    DockerOriginal,
 } from "devicons-react";
 import SectionTitle from "../ui/SectionTitle";
 import Card from "../ui/Card";
@@ -26,6 +31,37 @@ type Project = {
 };
 
 const itemProject: Project[] = [
+    {
+        title: "Task Manager API",
+        description: "task_manager_desciption",
+        technologies: [
+            {
+                name: "Node.js",
+                icon: NodejsOriginal,
+            },
+            {
+                name: "Express",
+                icon: ExpressOriginal,
+            },
+            {
+                name: "TypeScript",
+                icon: TypescriptOriginal,
+            },
+            {
+                name: "PostgreSQL",
+                icon: PostgresqlOriginal,
+            },
+            {
+                name: "Prisma",
+                icon: PrismaOriginal
+            },
+            {
+                name: "Docker",
+                icon: DockerOriginal
+            }
+        ],
+        githubUrl: "https://github.com/zywelf/task-manager-api",
+    },
     {
         title: "Porfolio v2",
         description: "portfolio_v2_description",
