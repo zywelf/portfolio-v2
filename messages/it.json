@@ -52,10 +52,11 @@
     },
     "projects": {
         "title": "Progetti",
-        "task_manager_desciption": "API RESTful per la gestione dei task costruita con Node.js, Express e TypeScript. Include autenticazione JWT, operazioni CRUD complete, validazione degli input con Zod e PostgreSQL gestito tramite Prisma ORM. Completamente containerizzata con Docker.",
-        "portfolio_v2_description": "Questo stesso portfolio — costruito con Next.js, TypeScript, Tailwind CSS e next-intl per il supporto bilingue. Include dark/light mode, SSG e un'architettura completamente component-driven.",
-        "portfolio_v1_description": "Il mio primo portfolio da developer, costruito da zero con HTML, CSS e JavaScript vanilla. Implementato un sistema bilingue custom (IT/EN) con data attributes, prima di imparare le librerie i18n dedicate — la base che ha portato alla versione Next.js che stai visitando ora.",
-        "flutter_description": "Progetto di Human-Computer Interaction sul benessere digitale — un'app ibrida che combina un blocco schermo anti-distrazione con la riproduzione musicale. Ricerca e adattamento dell'implementazione dopo aver scoperto restrizioni a livello di sistema operativo, con pivot verso una modalità focus a timer mantenendo l'accesso alle chiamate di emergenza."
+        "task_manager_app_description": "App mobile React Native per la gestione dei task con autenticazione JWT, gesture swipe, tema dark/light e supporto bilingue. Costruita con Expo, TypeScript e collegata al backend Task Manager API.",
+        "task_manager_desciption": "API RESTful per la gestione dei task costruita con Node.js, Express e TypeScript. Include autenticazione JWT, validazione robusta degli input con Zod e PostgreSQL gestito tramite Prisma ORM. Il progetto segue una Clean Architecture, è completamente containerizzato con Docker ed è pronto per il deployment.",
+        "portfolio_v2_description": "La versione attuale del mio portfolio, sviluppata con Next.js, TypeScript e Tailwind CSS. Sfrutta il rendering statico (SSG) per performance ottimali e next-intl per la gestione del bilinguismo. L'applicazione adotta un'architettura rigorosamente component-driven e include il supporto alla modalità dark/light.",
+        "portfolio_v1_description": "Il mio primo portfolio da developer, costruito da zero in Vanilla JavaScript, HTML5 e CSS3. Vi ho implementato un sistema di internazionalizzazione (IT/EN) custom tramite data-attributes: una sfida logica che ha gettato le basi per l'architettura i18n della versione Next.js attuale.",
+        "flutter_description": "Progetto di Human-Computer Interaction focalizzato sul benessere digitale: un'app mobile ibrida sviluppata in Flutter che combina un blocco schermo anti-distrazione alla riproduzione musicale. Di fronte alle restrizioni di sistema dei moderni OS, ho guidato un pivot tecnico verso una modalità focus con timer, garantendo comunque l'accesso alle chiamate di emergenza."
     },
     "contact": {
         "title": "Contattami",

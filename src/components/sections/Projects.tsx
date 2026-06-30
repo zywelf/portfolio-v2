@@ -15,6 +15,8 @@ import {
     PostgresqlOriginal,
     PrismaOriginal,
     DockerOriginal,
+    ReactnativeOriginal,
+    ExpoOriginal,
 } from "devicons-react";
 import SectionTitle from "../ui/SectionTitle";
 import Card from "../ui/Card";
@@ -31,6 +33,25 @@ type Project = {
 };
 
 const itemProject: Project[] = [
+    {
+        title: "Task Manager APP",
+        description: "task_manager_app_description",
+        technologies: [
+            {
+                name: "React Native",
+                icon: ReactnativeOriginal
+            },
+            {
+                name: "TypeScript",
+                icon: TypescriptOriginal
+            },
+            {
+                name: "Expo",
+                icon: ExpoOriginal
+            },
+        ],
+        githubUrl: "https://github.com/zywelf/task-manager-app",
+    },
     {
         title: "Task Manager API",
         description: "task_manager_desciption",
@@ -63,7 +84,7 @@ const itemProject: Project[] = [
         githubUrl: "https://github.com/zywelf/task-manager-api",
     },
     {
-        title: "Porfolio v2",
+        title: "Portfolio v2",
         description: "portfolio_v2_description",
         technologies: [
             {
@@ -86,7 +107,7 @@ const itemProject: Project[] = [
         githubUrl: "https://github.com/zywelf/portfolio-v2",
     },
     {
-        title: "Porfolio v1",
+        title: "Portfolio v1",
         description: "portfolio_v1_description",
         technologies: [
             {
