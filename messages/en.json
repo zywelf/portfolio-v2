@@ -52,10 +52,11 @@
     },
     "projects": {
         "title": "Projects",
-        "task_manager_desciption": "A RESTful API for task management built with Node.js, Express and TypeScript. Features JWT authentication, full CRUD operations, input validation with Zod and PostgreSQL managed via Prisma ORM. Fully containerized with Docker.",
-        "portfolio_v2_description": "This very portfolio — built with Next.js, TypeScript, Tailwind CSS and next-intl for bilingual support. Features dark/light mode, SSG and a fully component-driven architecture.",
-        "portfolio_v1_description": "My first developer portfolio, built from scratch with vanilla HTML, CSS and JavaScript. Implemented a custom bilingual system (IT/EN) using data attributes before learning dedicated i18n libraries — the foundation that led to the Next.js version you're viewing now.",
-        "flutter_description": "A Human-Computer Interaction project exploring digital wellbeing — a hybrid focus app combining a distraction-blocking lock screen with music playback. Researched and adapted the implementation after discovering OS-level restrictions on screen-lock control, pivoting to a timer-based focus mode with emergency access preserved."
+        "task_manager_app_description": "A React Native mobile app for task management with JWT authentication, swipe gestures, dark/light theme and bilingual support. Built with Expo, TypeScript and connected to the Task Manager API backend.",
+        "task_manager_desciption": "A RESTful API for task management built with Node.js, Express, and TypeScript. It features JWT authentication, robust input validation using Zod, and a PostgreSQL database managed via Prisma ORM. The project follows clean architecture principles and is fully containerized with Docker for seamless deployment.",
+        "portfolio_v2_description": "The current version of my portfolio, built using Next.js, TypeScript, and Tailwind CSS. It leverages Static Site Generation (SSG) for optimal performance and next-intl for multi-language support. The application adopts a strictly component-driven architecture and includes native dark/light mode support.",
+        "portfolio_v1_description": "My very first developer portfolio, built from scratch using vanilla JavaScript, HTML5, and CSS3. I implemented a custom internationalization system (IT/EN) using data attributes before working with dedicated i18n libraries—a logical challenge that laid the groundwork for the current Next.js version.",
+        "flutter_description": "A Human-Computer Interaction project focused on digital well-being: a hybrid mobile app developed with Flutter that combines an anti-distraction screen locker with music playback. When faced with OS-level system restrictions, I pivoted the technical approach toward a timer-based focus mode while preserving access to emergency calls."
     },
     "contact": {
         "title": "Contact Me",
