@@ -24,7 +24,7 @@ interface HobbiesProps {
 
 export default function Hobbies({ games }: HobbiesProps) {
     const t = useTranslations("hobbies");
-    console.log("Giochi: ", games);
+
     return (
         <Section id="hobbies">
             <SectionTitle>{t("title")}</SectionTitle>
@@ -49,6 +49,7 @@ export default function Hobbies({ games }: HobbiesProps) {
                                     src={item.background_image}
                                     alt={item.name}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
                                     className="object-cover"
                                 />
                             </div>
