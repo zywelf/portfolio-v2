@@ -18,7 +18,6 @@ import {
 } from "devicons-react";
 import { MapPin, Wifi } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import React from "react";
 import { useTranslations } from "next-intl";
 import Section from "../layout/Section";
 import Link from "next/link";
