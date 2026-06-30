@@ -23,6 +23,10 @@ const navItems: NavItem[] = [
         href: "#projects",
     },
     {
+        title: "hobbies",
+        href: "#hobbies",
+    },
+    {
         title: "contact",
         href: "#contact",
     },

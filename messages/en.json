@@ -4,6 +4,7 @@
         "experience": "Experience",
         "projects": "Projects",
         "contact": "Contact",
+        "hobbies": "Hobbies",
         "language": "EN"
     },
     "hero": {
@@ -57,6 +58,10 @@
         "portfolio_v2_description": "The current version of my portfolio, built using Next.js, TypeScript, and Tailwind CSS. It leverages Static Site Generation (SSG) for optimal performance and next-intl for multi-language support. The application adopts a strictly component-driven architecture and includes native dark/light mode support.",
         "portfolio_v1_description": "My very first developer portfolio, built from scratch using vanilla JavaScript, HTML5, and CSS3. I implemented a custom internationalization system (IT/EN) using data attributes before working with dedicated i18n libraries—a logical challenge that laid the groundwork for the current Next.js version.",
         "flutter_description": "A Human-Computer Interaction project focused on digital well-being: a hybrid mobile app developed with Flutter that combines an anti-distraction screen locker with music playback. When faced with OS-level system restrictions, I pivoted the technical approach toward a timer-based focus mode while preserving access to emergency calls."
+    },
+    "hobbies": {
+        "title": "Hobbies",
+        "games": "Videogames"
     },
     "contact": {
         "title": "Contact Me",
