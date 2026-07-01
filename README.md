@@ -9,6 +9,7 @@ Personal portfolio built with Next.js 14 App Router, TypeScript, Tailwind CSS v4
 ## Tech Stack
 
 **Frontend**
+
 - Next.js 14 (App Router, SSG, SSR)
 - TypeScript
 - Tailwind CSS v4
@@ -16,10 +17,12 @@ Personal portfolio built with Next.js 14 App Router, TypeScript, Tailwind CSS v4
 - next-intl (i18n IT/EN)
 
 **Email**
+
 - Resend API
 - React Email
 
 **Deploy**
+
 - Vercel (CI/CD on push to main)
 
 ## Features

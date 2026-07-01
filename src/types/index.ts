@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 export type NavItem = {
-    title: string;
-    href: string;
+  title: string
+  href: string
 }
 
 export type Technology = {
-    name: string
-    icon: React.ComponentType<{ size?: number }>
+  name: string
+  icon: React.ComponentType<{ size?: number }>
 }
