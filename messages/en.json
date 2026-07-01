@@ -1,77 +1,77 @@
 {
-    "nav": {
-        "about": "About",
-        "experience": "Experience",
-        "projects": "Projects",
-        "contact": "Contact",
-        "hobbies": "Hobbies",
-        "language": "EN"
-    },
-    "hero": {
-        "title": "Full Stack Developer",
-        "subtitle": "Front to back, pixel to server.",
-        "description": "Hi, I'm Zywel I build the Frontend you see and the Backend that powers it.",
-        "cta": "View my work"
-    },
-    "about": {
-        "title": "Informations",
-        "subtitle": "About me",
-        "description": [
-            "I am a Full Stack Web Developer specialized in designing and developing B2B SaaS platforms in production environments.",
-            "My approach combines the engineering of robust backend architectures with the creation of fluid, data-driven and accessible user interfaces.",
-            "I have over 2 years of commercial experience focused on Component-Driven Architecture, web performance optimization (SSR/ISR) and complex data flow management. Used to operating in fast-paced Agile (Scrum) teams, where software quality is ensured through Clean Code principles and constructive Code Reviews.",
-            "Open to international relocation and oriented toward continuous growth, with increasing interest in the DevOps world and large-scale software engineering practices."
-        ],
-        "skills_title": "Technologies",
-        "languages_title": "Languages",
-        "lang_italian_name": "Italian",
-        "lang_italian_level": "Native",
-        "lang_english_name": "English",
-        "lang_english_level": "Fluent",
-        "lang_french_name": "French",
-        "lang_french_level": "Basic",
-        "contact_title": "Contact",
-        "location": "Arezzo, Italy",
-        "availability": "Open to remote & relocation"
-    },
-    "experience": {
-        "title": "Experience",
-        "metriks_bullets": [
-            "Built and maintained Dbiz, a B2B SaaS platform for business data analytics used by enterprise clients",
-            "Developed data-driven dashboards and Investor Relations portals with React, Next.js and TypeScript",
-            "Designed and implemented a headless CMS for corporate documents using Django REST Framework",
-            "Established CI/CD pipelines on Bitbucket with automated deploy to AWS, reducing release time",
-            "Containerized services with Docker and collaborated in Agile Scrum sprints with code reviews",
-            "Applied WCAG accessibility standards across all frontend interfaces",
-            "Worked in Agile Scrum environment with sprint planning, daily standups and retrospectives"
-        ],
-        "giaogiao_bullets": [
-            "Built responsive web and mobile interfaces for a digital ordering platform and self-service kiosk",
-            "Developed frontend with Vue.js, JavaScript, HTML5 and CSS in a fast-paced 3-person startup team",
-            "Delivered features end-to-end following Agile methodology with short iteration cycles"
-        ]
-    },
-    "projects": {
-        "title": "Projects",
-        "task_manager_app_description": "A React Native mobile app for task management with JWT authentication, swipe gestures, dark/light theme and bilingual support. Built with Expo, TypeScript and connected to the Task Manager API backend.",
-        "task_manager_desciption": "A RESTful API for task management built with Node.js, Express, and TypeScript. It features JWT authentication, robust input validation using Zod, and a PostgreSQL database managed via Prisma ORM. The project follows clean architecture principles and is fully containerized with Docker for seamless deployment.",
-        "portfolio_v2_description": "The current version of my portfolio, built using Next.js, TypeScript, and Tailwind CSS. It leverages Static Site Generation (SSG) for optimal performance and next-intl for multi-language support. The application adopts a strictly component-driven architecture and includes native dark/light mode support.",
-        "portfolio_v1_description": "My very first developer portfolio, built from scratch using vanilla JavaScript, HTML5, and CSS3. I implemented a custom internationalization system (IT/EN) using data attributes before working with dedicated i18n libraries—a logical challenge that laid the groundwork for the current Next.js version.",
-        "flutter_description": "A Human-Computer Interaction project focused on digital well-being: a hybrid mobile app developed with Flutter that combines an anti-distraction screen locker with music playback. When faced with OS-level system restrictions, I pivoted the technical approach toward a timer-based focus mode while preserving access to emergency calls."
-    },
-    "hobbies": {
-        "title": "Hobbies",
-        "games": "Videogames"
-    },
-    "contact": {
-        "title": "Contact Me",
-        "fullname": "Full name",
-        "email": "Email",
-        "cellphone": "Cellphone",
-        "message": "Message",
-        "send": "Send",
-        "sending": "Sending...",
-        "success": "Message sent succefully!",
-        "error": "Something is wrong, try it again!"
-    }
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "hobbies": "Hobbies",
+    "language": "EN"
+  },
+  "hero": {
+    "title": "Full Stack Developer",
+    "subtitle": "Front to back, pixel to server.",
+    "description": "Hi, I'm Zywel I build the Frontend you see and the Backend that powers it.",
+    "cta": "View my work"
+  },
+  "about": {
+    "title": "Informations",
+    "subtitle": "About me",
+    "description": [
+      "I am a Full Stack Web Developer specialized in designing and developing B2B SaaS platforms in production environments.",
+      "My approach combines the engineering of robust backend architectures with the creation of fluid, data-driven and accessible user interfaces.",
+      "I have over 2 years of commercial experience focused on Component-Driven Architecture, web performance optimization (SSR/ISR) and complex data flow management. Used to operating in fast-paced Agile (Scrum) teams, where software quality is ensured through Clean Code principles and constructive Code Reviews.",
+      "Open to international relocation and oriented toward continuous growth, with increasing interest in the DevOps world and large-scale software engineering practices."
+    ],
+    "skills_title": "Technologies",
+    "languages_title": "Languages",
+    "lang_italian_name": "Italian",
+    "lang_italian_level": "Native",
+    "lang_english_name": "English",
+    "lang_english_level": "Fluent",
+    "lang_french_name": "French",
+    "lang_french_level": "Basic",
+    "contact_title": "Contact",
+    "location": "Arezzo, Italy",
+    "availability": "Open to remote & relocation"
+  },
+  "experience": {
+    "title": "Experience",
+    "metriks_bullets": [
+      "Built and maintained Dbiz, a B2B SaaS platform for business data analytics used by enterprise clients",
+      "Developed data-driven dashboards and Investor Relations portals with React, Next.js and TypeScript",
+      "Designed and implemented a headless CMS for corporate documents using Django REST Framework",
+      "Established CI/CD pipelines on Bitbucket with automated deploy to AWS, reducing release time",
+      "Containerized services with Docker and collaborated in Agile Scrum sprints with code reviews",
+      "Applied WCAG accessibility standards across all frontend interfaces",
+      "Worked in Agile Scrum environment with sprint planning, daily standups and retrospectives"
+    ],
+    "giaogiao_bullets": [
+      "Built responsive web and mobile interfaces for a digital ordering platform and self-service kiosk",
+      "Developed frontend with Vue.js, JavaScript, HTML5 and CSS in a fast-paced 3-person startup team",
+      "Delivered features end-to-end following Agile methodology with short iteration cycles"
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "task_manager_app_description": "A React Native mobile app for task management with JWT authentication, swipe gestures, dark/light theme and bilingual support. Built with Expo, TypeScript and connected to the Task Manager API backend.",
+    "task_manager_desciption": "A RESTful API for task management built with Node.js, Express, and TypeScript. It features JWT authentication, robust input validation using Zod, and a PostgreSQL database managed via Prisma ORM. The project follows clean architecture principles and is fully containerized with Docker for seamless deployment.",
+    "portfolio_v2_description": "The current version of my portfolio, built using Next.js, TypeScript, and Tailwind CSS. It leverages Static Site Generation (SSG) for optimal performance and next-intl for multi-language support. The application adopts a strictly component-driven architecture and includes native dark/light mode support.",
+    "portfolio_v1_description": "My very first developer portfolio, built from scratch using vanilla JavaScript, HTML5, and CSS3. I implemented a custom internationalization system (IT/EN) using data attributes before working with dedicated i18n libraries—a logical challenge that laid the groundwork for the current Next.js version.",
+    "flutter_description": "A Human-Computer Interaction project focused on digital well-being: a hybrid mobile app developed with Flutter that combines an anti-distraction screen locker with music playback. When faced with OS-level system restrictions, I pivoted the technical approach toward a timer-based focus mode while preserving access to emergency calls."
+  },
+  "hobbies": {
+    "title": "Hobbies",
+    "games": "Videogames"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "fullname": "Full name",
+    "email": "Email",
+    "cellphone": "Cellphone",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent succefully!",
+    "error": "Something is wrong, try it again!"
+  }
 }
