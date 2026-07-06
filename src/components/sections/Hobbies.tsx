@@ -51,8 +51,8 @@ export default function Hobbies({ games }: HobbiesProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="z-10 left-2 xl:-left-12 border-white/20 bg-black/60 text-white shadow-md hover:bg-black/75" />
+        <CarouselNext className="z-10 right-2 xl:-right-12 border-white/20 bg-black/60 text-white shadow-md hover:bg-black/75" />
       </Carousel>
     </Section>
   )
