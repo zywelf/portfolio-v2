@@ -92,7 +92,7 @@ export default function Contact() {
             onChange={(e) => handleChange('email', e.target.value)}
           />
           <label className="text-sm text-muted-foreground mb-1" htmlFor="cellphone">
-            {t('cellphone')}
+            {t('cellphone')}*
           </label>
           <input
             required

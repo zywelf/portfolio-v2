@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { Html, Body, Container, Heading, Text, Hr, Section } from '@react-email/components'
 
 interface EmailTemplateProps {
