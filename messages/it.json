@@ -72,6 +72,11 @@
     "send": "Invia",
     "sending": "Invio in corso...",
     "success": "Messaggio inviato con successo!",
-    "error": "Qualcosa è andato storto, riprova."
+    "error": "Qualcosa è andato storto, riprova.",
+    "errors": {
+      "required": "Campo obbligatorio",
+      "tooLong": "Testo troppo lungo",
+      "invalidEmail": "Email non valida"
+    }
   }
 }

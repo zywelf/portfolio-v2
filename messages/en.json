@@ -72,6 +72,11 @@
     "send": "Send",
     "sending": "Sending...",
     "success": "Message sent succefully!",
-    "error": "Something is wrong, try it again!"
+    "error": "Something is wrong, try it again!",
+    "errors": {
+      "required": "Required field",
+      "tooLong": "Text too long",
+      "invalidEmail": "Invalid email"
+    }
   }
 }
