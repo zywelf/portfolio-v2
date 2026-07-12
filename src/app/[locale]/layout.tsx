@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { Metadata } from 'next'
+import { HtmlLangSync } from '@/components/layout/HtmlLangSync'
 
 type Props = {
   children: React.ReactNode
@@ -41,8 +42,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function LocaleLayout({ children }: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages()
+  const { locale } = await params
 
-  return <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+  return (
+    <NextIntlClientProvider messages={messages}>
+      <HtmlLangSync locale={locale} />
+      {children}
+    </NextIntlClientProvider>
+  )
 }
