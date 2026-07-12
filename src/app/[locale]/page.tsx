@@ -17,19 +17,34 @@ async function listGames() {
     'Sekiro: Shadows Die Twice',
     'God of War (2018)',
   ]
-  const res = await Promise.all(
+  const results = await Promise.all(
     games.map(async (name) => {
-      const response = await fetch(`https://api.rawg.io/api/games?key=${api}&search=${name}`, {
-        next: { revalidate: 86400 },
-      })
-      const data = await response.json()
-      return {
-        name: data.results[0]?.name,
-        background_image: data.results[0]?.background_image,
+      try {
+        const response = await fetch(`https://api.rawg.io/api/games?key=${api}&search=${name}`, {
+          next: { revalidate: 86400 },
+        })
+
+        if (!response.ok) {
+          console.error(`RAWG API error for "${name}": ${response.status}`)
+          return null
+        }
+        const data = await response.json()
+        const game = data.results?.[0]
+
+        if (!game?.name || !game?.background_image) {
+          return null
+        }
+
+        return {
+          name: data.results[0]?.name,
+          background_image: data.results[0]?.background_image,
+        }
+      } catch (error) {
+        console.error(`RAWG API error for "${name}":`, error)
       }
     })
   )
-  return res
+  return results.filter((game): game is { name: string; background_image: string } => game !== null)
 }
 
 export default async function LocalPage() {
