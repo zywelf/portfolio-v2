@@ -1,5 +1,6 @@
 import { ThemeProvider } from '@/components/layout/ThemeProvider'
 import { JetBrains_Mono } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/next"
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="it" suppressHydrationWarning className={jetBrainsMono.variable}>
       <body>
+        <Analytics />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
