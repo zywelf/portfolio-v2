@@ -2,7 +2,7 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from '../../../i18n/navigation'
 import { useTheme } from 'next-themes'
 import { useState, useEffect } from 'react'
 import { NavItem } from '@/types'
@@ -35,6 +35,7 @@ const navItems: NavItem[] = [
 export default function Navbar() {
   const locale = useLocale()
   const router = useRouter()
+  const pathname = usePathname()
   const t = useTranslations('nav')
   const { resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
@@ -51,10 +52,7 @@ export default function Navbar() {
 
   const switchLanguage = () => {
     const newLocale = locale === 'it' ? 'en' : 'it'
-    const currentPath = window.location.pathname
-    const cleanPath = currentPath.split('#')[0]
-    const newPath = cleanPath.replace(`/${locale}`, `/${newLocale}`)
-    router.push(newPath, { scroll: false })
+    router.replace(pathname, { locale: newLocale, scroll: false })
   }
 
   return (
