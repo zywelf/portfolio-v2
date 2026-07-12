@@ -24,6 +24,7 @@ export default function Contact() {
   })
   const [isLoading, setIsLoading] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
 
   const inputClassName =
     'bg-transparent border dark:border-white/10 border-black/10 rounded-lg px-4 py-2 text-foreground text-sm focus:outline-none focus:border-teal-light dark:focus:border-teal-light transition-colors mb-4'
@@ -33,8 +34,9 @@ export default function Contact() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault() // blocca il refresh della pagina
+    e.preventDefault()
     setIsLoading(true)
+    setFieldErrors({})
 
     try {
       const response = await fetch('/api/send', {
@@ -54,8 +56,23 @@ export default function Contact() {
         })
         setTimeout(() => setStatus('idle'), 4000)
       } else {
+        const data = await response.json().catch(() => null)
+        const issues = Array.isArray(data?.error) ? data.error : null
+        if (issues) {
+          const errors: Record<string, string> = {}
+          for (const issue of issues) {
+            const field = issue.path?.[0]
+            if (typeof field === 'string' && !errors[field]) {
+              errors[field] = t(`errors.${issue.message}`)
+            }
+            setFieldErrors(errors)
+          }
+        }
         setStatus('error')
-        setTimeout(() => setStatus('idle'), 4000)
+        setTimeout(() => {
+          setStatus('idle')
+          setFieldErrors({})
+        }, 4000)
       }
     } catch {
       setStatus('error')
@@ -80,6 +97,7 @@ export default function Contact() {
             value={formData.fullName}
             onChange={(e) => handleChange('fullName', e.target.value)}
           />
+          {fieldErrors.fullName && <p className="text-red-500 text-xs -mt-3 mb-3">{fieldErrors.fullName}</p>}
           <label className="text-sm text-muted-foreground mb-1" htmlFor="email">
             {t('email')}*
           </label>
@@ -91,17 +109,20 @@ export default function Contact() {
             value={formData.email}
             onChange={(e) => handleChange('email', e.target.value)}
           />
+          {fieldErrors.email && <p className="text-red-500 text-xs -mt-3 mb-3">{fieldErrors.email}</p>}
           <label className="text-sm text-muted-foreground mb-1" htmlFor="cellphone">
-            {t('cellphone')}*
+            {t('cellphone')}
           </label>
           <input
-            required
             className={`${inputClassName}`}
             id="cellphone"
             type="text"
             value={formData.cellphone}
             onChange={(e) => handleChange('cellphone', e.target.value)}
           />
+          {fieldErrors.cellphone && (
+            <p className="text-red-500 text-xs -mt-3 mb-3">{fieldErrors.cellphone}</p>
+          )}
           <label className="text-sm text-muted-foreground mb-1" htmlFor="message">
             {t('message')}*
           </label>
@@ -112,7 +133,7 @@ export default function Contact() {
             onChange={(e) => handleChange('message', e.target.value)}
             className={`${inputClassName}`}
           ></textarea>
-
+          {fieldErrors.message && <p className="text-red-500 text-xs -mt-3 mb-3">{fieldErrors.message}</p>}
           <button
             type="submit"
             className="mt-4 px-6 py-3 rounded-full border border-teal-light text-teal-light hover:bg-teal-light hover:text-black transition-colors self-start disabled:opacity-50"
