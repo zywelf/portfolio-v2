@@ -77,7 +77,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={switchLanguage}
-          className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
         >
           {locale === 'it' ? <IT className="w-4 h-4" /> : <GB className="w-4 h-4" />}
           <span>{t('language')}</span>
@@ -86,7 +86,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={switchTheme}
-            className="text-muted-foreground hover:text-foreground transition-colors"
+            className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
           >
             {resolvedTheme === 'dark' ? '☀️' : '🌙'}
           </button>
