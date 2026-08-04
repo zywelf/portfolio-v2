@@ -63,7 +63,9 @@
   },
   "hobbies": {
     "title": "Hobbies",
-    "games": "Videogames"
+    "games": "Videogames",
+    "unavailable": "Content temporarily unavailable"
+
   },
   "contact": {
     "title": "Contact Me",
