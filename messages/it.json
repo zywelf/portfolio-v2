@@ -53,6 +53,7 @@
   },
   "projects": {
     "title": "Progetti",
+    "ava_description": "Il mio primo progetto di AI, costruito da zero: un assistente per documenti full stack che permette di caricare file e ritrovarli per significato, non solo per parole esatte. Backend FastAPI con PostgreSQL e pgvector per la ricerca semantica, frontend in React e TypeScript, tutto containerizzato con Docker.",
     "vue_store_description": "E-commerce single page application con catalogo prodotti, filtro per categoria gestito via URL, pagina di dettaglio, carrello e tema chiaro/scuro. Design system in CSS custom properties e test unitari con Vitest.",
     "task_manager_app_description": "App mobile React Native per la gestione dei task con autenticazione JWT, gesture swipe, tema dark/light e supporto bilingue. Costruita con Expo, TypeScript e collegata al backend Task Manager API.",
     "task_manager_desciption": "API RESTful per la gestione dei task costruita con Node.js, Express e TypeScript. Include autenticazione JWT, validazione robusta degli input con Zod e PostgreSQL gestito tramite Prisma ORM. Il progetto segue una Clean Architecture, è completamente containerizzato con Docker ed è pronto per il deployment.",
