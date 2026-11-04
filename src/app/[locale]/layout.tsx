@@ -14,6 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isIT = locale === 'it'
 
   return {
+    metadataBase: new URL('https://portfolio-v2-three-bay-23.vercel.app'),
     title: 'Zywel Fankam | Full Stack Developer',
     description: isIT
       ? 'Full Stack Developer specializzato in React, Next.js e Django. Dal Frontend al Backend, dal pixel al server.'
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: isIT
         ? 'Full Stack Developer specializzato in React, Next.js e Django.'
         : 'Full Stack Developer specialized in React, Next.js and Django.',
-      url: 'https://portfolio-v2-three-bay-23.vercel.app',
+      url: `/${locale}`,
       siteName: 'Zywel Fankam Portfolio',
       locale: locale,
       type: 'website',
