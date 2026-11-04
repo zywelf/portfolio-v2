@@ -19,6 +19,8 @@ import {
   ExpoOriginal,
   VuejsOriginal,
   ViteOriginal,
+  PythonOriginal,
+  FastapiOriginal,
 } from 'devicons-react'
 import { FiExternalLink } from 'react-icons/fi'
 import SectionTitle from '../ui/SectionTitle'
@@ -37,6 +39,21 @@ type Project = {
 }
 
 const itemProject: Project[] = [
+  {
+    title: 'Ava',
+    description: 'ava_description',
+    technologies: [
+      { name: 'Python', icon: PythonOriginal },
+      { name: 'FastAPI', icon: FastapiOriginal },
+      { name: 'PostgreSQL', icon: PostgresqlOriginal },
+      { name: 'React', icon: ReactOriginal },
+      { name: 'TypeScript', icon: TypescriptOriginal },
+      { name: 'Vite', icon: ViteOriginal },
+      { name: 'Tailwind CSS', icon: TailwindcssOriginal },
+      { name: 'Docker', icon: DockerOriginal },
+    ],
+    githubUrl: 'https://github.com/zywelf/ava-assistant',
+  },
   {
     title: 'Vue Store',
     description: 'vue_store_description',
