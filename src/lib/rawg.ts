@@ -19,7 +19,7 @@ export async function listGames() {
         })
 
         if (!response.ok) {
-          console.error(`RAWG API error for "${name}": ${response.status}`)
+          console.warn(`RAWG API error for "${name}": ${response.status}`)
           return null
         }
         const data = await response.json()
@@ -34,7 +34,8 @@ export async function listGames() {
           background_image: data.results[0]?.background_image,
         }
       } catch (error) {
-        console.error(`RAWG API error for "${name}":`, error)
+        // warn, not error: RAWG being down is expected and handled by the fallback
+        console.warn(`RAWG API error for "${name}": ${error instanceof Error ? error.message : error}`)
         return null
       }
     })
