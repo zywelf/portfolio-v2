@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Section from '../layout/Section'
 import SectionTitle from '../ui/SectionTitle'
 import { useTranslations } from 'next-intl'
@@ -25,7 +25,7 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
-
+  const resetTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const inputClassName =
     'bg-transparent border dark:border-white/10 border-black/10 rounded-lg px-4 py-2 text-foreground text-sm focus:outline-none focus:border-teal-light dark:focus:border-teal-light transition-colors mb-4'
 
@@ -33,7 +33,17 @@ export default function Contact() {
     setFormData({ ...formData, [field]: value })
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  useEffect(() => () => clearTimeout(resetTimer.current), [])
+
+  const resetStatusLater = () => {
+    clearTimeout(resetTimer.current)
+    resetTimer.current = setTimeout(() => {
+      setStatus('idle')
+      setFieldErrors({})
+    }, 4000)
+  }
+
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsLoading(true)
     setFieldErrors({})
@@ -54,7 +64,7 @@ export default function Contact() {
           cellphone: '',
           message: '',
         })
-        setTimeout(() => setStatus('idle'), 4000)
+        resetStatusLater()
       } else {
         const data = await response.json().catch(() => null)
         const issues = Array.isArray(data?.error) ? data.error : null
@@ -65,17 +75,15 @@ export default function Contact() {
             if (typeof field === 'string' && !errors[field]) {
               errors[field] = t(`errors.${issue.message}`)
             }
-            setFieldErrors(errors)
           }
+          setFieldErrors(errors)
         }
         setStatus('error')
-        setTimeout(() => {
-          setStatus('idle')
-          setFieldErrors({})
-        }, 4000)
+        resetStatusLater()
       }
     } catch {
       setStatus('error')
+      resetStatusLater()
     } finally {
       setIsLoading(false)
     }
@@ -105,7 +113,7 @@ export default function Contact() {
             required
             className={`${inputClassName}`}
             id="email"
-            type="text"
+            type="email"
             value={formData.email}
             onChange={(e) => handleChange('email', e.target.value)}
           />
@@ -116,7 +124,7 @@ export default function Contact() {
           <input
             className={`${inputClassName}`}
             id="cellphone"
-            type="text"
+            type="tel"
             value={formData.cellphone}
             onChange={(e) => handleChange('cellphone', e.target.value)}
           />
