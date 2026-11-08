@@ -33,6 +33,7 @@ export async function listGames() {
         }
       } catch (error) {
         console.error(`RAWG API error for "${name}":`, error)
+        return null
       }
     })
   )
