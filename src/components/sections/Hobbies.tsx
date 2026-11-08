@@ -7,11 +7,7 @@ import SectionTitle from '../ui/SectionTitle'
 import Image from 'next/image'
 import SectionSubtitle from '../ui/SectionSubtitle'
 import { EmptyState } from './EmptyStateHobbies'
-
-type Game = {
-  name: string
-  background_image: string
-}
+import type { Game } from '@/types'
 
 interface HobbiesProps {
   games: Game[]
