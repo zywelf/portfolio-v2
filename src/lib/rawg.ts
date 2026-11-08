@@ -14,6 +14,8 @@ export async function listGames() {
       try {
         const response = await fetch(`https://api.rawg.io/api/games?key=${api}&search=${name}`, {
           next: { revalidate: 86400 },
+          // Don't let a slow or offline RAWG keep the Hobbies section stuck on the skeleton
+          signal: AbortSignal.timeout(4000),
         })
 
         if (!response.ok) {
