@@ -55,9 +55,7 @@ export default async function TaskManagerDemoPage({ params }: Props) {
         <h1 className="text-5xl font-extrabold leading-none tracking-[-.03em] sm:text-[56px]">
           Task Manager
         </h1>
-        <p className="text-lg leading-[1.55] text-muted-foreground [text-wrap:pretty]">
-          {t('intro')}
-        </p>
+        <p className="text-lg leading-[1.55] text-muted-foreground [text-wrap:pretty]">{t('intro')}</p>
         <div className="flex flex-wrap gap-2">
           {STACK.map((s) => (
             <span key={s} className="rounded-full border border-border px-3 py-1.5 text-[13px]">
