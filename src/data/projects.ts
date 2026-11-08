@@ -22,14 +22,14 @@ export const PROJECTS: Project[] = [
     description: 'vue_store_description',
     technologies: [TECH.vue, TECH.typescript, TECH.vite],
     githubUrl: 'https://github.com/zywelf/vue-store',
-    liveUrl: 'https://vue-store-umber.vercel.app/',
+    links: [{ href: 'https://vue-store-umber.vercel.app/', label: 'live_demo' }],
   },
   {
     title: 'Task Manager APP',
     description: 'task_manager_app_description',
     technologies: [TECH.reactNative, TECH.typescript, TECH.expo],
     githubUrl: 'https://github.com/zywelf/task-manager-app',
-    demoPath: '/projects/task-manager-app',
+    links: [{ href: '/projects/task-manager-app', label: 'live_demo' }],
   },
   {
     title: 'Task Manager API',

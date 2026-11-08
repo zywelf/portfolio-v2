@@ -2,7 +2,7 @@ import { MapPin, Wifi } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import Section from '../layout/Section'
-import Link from 'next/link'
+import AppLink from '../ui/AppLink'
 import TechBadge from '../ui/TechBadge'
 import Card from '../ui/Card'
 import SectionTitle from '../ui/SectionTitle'
@@ -57,20 +57,18 @@ export default function About() {
 
             {/* Social */}
             <div className="flex items-center gap-4 mt-2">
-              <Link
+              <AppLink
                 href="https://github.com/zywelf"
-                target="_blank"
                 className="text-muted-foreground hover:text-teal-light transition-colors"
               >
                 <FaGithub size={24} />
-              </Link>
-              <Link
+              </AppLink>
+              <AppLink
                 href="https://linkedin.com/in/zywel-fankam"
-                target="_blank"
                 className="text-muted-foreground hover:text-teal-light transition-colors"
               >
                 <FaLinkedin size={24} />
-              </Link>
+              </AppLink>
             </div>
           </div>
           {/* Technologies */}

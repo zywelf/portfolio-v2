@@ -29,12 +29,18 @@ export type Experience = {
   technologies: Technology[]
 }
 
+export type ProjectLink = {
+  /** "/..." for a page of this site (locale is added automatically), full URL for external sites */
+  href: string
+  /** translation key under `projects` */
+  label: string
+}
+
 export type Project = {
   title: string
   /** translation key under `projects` */
   description: string
   technologies: Technology[]
   githubUrl: string
-  liveUrl?: string
-  demoPath?: string
+  links?: ProjectLink[]
 }
