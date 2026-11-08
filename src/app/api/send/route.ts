@@ -1,13 +1,6 @@
 import { EmailTemplate } from '../../../components/email-template'
 import { Resend } from 'resend'
-import { z } from 'zod'
-
-const contactSchema = z.object({
-  fullName: z.string().trim().min(1, 'required').max(100, 'tooLong'),
-  email: z.email('invalidEmail').max(254, 'tooLong'),
-  cellphone: z.string().trim().max(30, 'tooLong').optional().or(z.literal('')),
-  message: z.string().trim().min(1, 'required').max(5000, 'tooLong'),
-})
+import { contactSchema } from '@/lib/contact-schema'
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null)

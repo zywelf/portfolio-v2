@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Archivo } from 'next/font/google'
 import { getTranslations } from 'next-intl/server'
 import { FiArrowLeft } from 'react-icons/fi'
-import { Link } from '../../../../../i18n/navigation'
+import AppLink from '@/components/ui/AppLink'
 import TaskAppDemo from '@/components/demos/task-manager/TaskAppDemo'
 
 const archivo = Archivo({
@@ -40,13 +40,13 @@ export default async function TaskManagerDemoPage({ params }: Props) {
     <main
       className={`${archivo.variable} relative flex min-h-screen flex-wrap items-center justify-center gap-18 bg-background px-8 pb-14 pt-22 text-foreground`}
     >
-      <Link
+      <AppLink
         href="/#projects"
         className="absolute left-6 top-6 flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-teal-light"
       >
         <FiArrowLeft size={16} aria-hidden="true" />
         {t('back')}
-      </Link>
+      </AppLink>
 
       <section className="flex max-w-110 flex-1 basis-80 flex-col gap-5">
         <span className="text-xs font-semibold uppercase tracking-widest text-teal-light">{t('kicker')}</span>
@@ -63,14 +63,12 @@ export default async function TaskManagerDemoPage({ params }: Props) {
           <span className="text-base font-extrabold">{t('try_title')}</span>
           <span className="text-base leading-normal text-muted-foreground">{t('try_body')}</span>
         </div>
-        <a
+        <AppLink
           href="https://github.com/zywelf/task-manager-app"
-          target="_blank"
-          rel="noreferrer"
           className="text-base font-semibold text-teal-light hover:text-teal"
         >
           {t('code')}
-        </a>
+        </AppLink>
       </section>
 
       <div className="flex-none rounded-4xl ring-1 ring-border shadow-2xl shadow-teal-light/10">

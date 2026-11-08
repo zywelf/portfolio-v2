@@ -2,21 +2,14 @@ import type { Game } from '@/types'
 
 const api = process.env.RAWG_API_KEY
 
-export async function listGames() {
+// Looks up each title on RAWG and returns the ones with a name and cover image
+export async function searchGames(titles: string[]): Promise<Game[]> {
   if (!api) {
     console.warn('RAWG_API_KEY is not set, skipping games fetch')
     return []
   }
-  const games = [
-    'Destiny 2',
-    'Expedition 33',
-    'Shadow of Mordor: Middle of Earth',
-    'Monster Hunter World',
-    'Sekiro: Shadows Die Twice',
-    'God of War (2018)',
-  ]
   const results = await Promise.all(
-    games.map(async (name) => {
+    titles.map(async (name) => {
       try {
         const response = await fetch(
           `https://api.rawg.io/api/games?key=${api}&search=${encodeURIComponent(name)}`,
