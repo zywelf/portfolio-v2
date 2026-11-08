@@ -35,9 +35,9 @@ export default function TasksScreen(props: TasksScreenProps) {
   const { tasks, filter, query, drag, tutorial } = props
 
   const total = tasks.length
-  const done = tasks.filter(t => t.completed).length
+  const done = tasks.filter((t) => t.completed).length
   const q = query.trim().toLowerCase()
-  const visible = tasks.filter(t => matchesFilter(t, filter) && matchesQuery(t, q))
+  const visible = tasks.filter((t) => matchesFilter(t, filter) && matchesQuery(t, q))
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
@@ -60,7 +60,7 @@ export default function TasksScreen(props: TasksScreenProps) {
       />
 
       <div className="min-h-0 flex-1 overflow-y-auto pb-30 scrollbar-none">
-        {visible.map(task => (
+        {visible.map((task) => (
           <TaskRow
             key={task.id}
             task={task}

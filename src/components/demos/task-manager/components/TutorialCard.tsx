@@ -24,7 +24,7 @@ export default function TutorialCard({ step, total, title, body, onSkip }: Tutor
       <span className="text-xl font-extrabold leading-tight">{title}</span>
       <span className="text-sm leading-snug opacity-80">{body}</span>
       <div className="mt-1.5 flex gap-1">
-        {Array.from({ length: total }, (_, i) => i + 1).map(n => (
+        {Array.from({ length: total }, (_, i) => i + 1).map((n) => (
           <span
             key={n}
             className="h-1 flex-1 rounded-full"

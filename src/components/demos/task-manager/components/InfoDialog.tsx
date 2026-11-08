@@ -4,7 +4,7 @@ export default function InfoDialog({ onClose, onReplay }: { onClose: () => void;
   return (
     <div onClick={onClose} className="absolute inset-0 z-40 flex items-center bg-black/50 p-5">
       <div
-        onClick={e => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
         className="flex w-full flex-col overflow-hidden rounded-2xl bg-tm-bg shadow-xl"
       >
         <div className="border-b-2 border-tm-divider px-5 pb-3.5 pt-5">

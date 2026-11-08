@@ -46,7 +46,7 @@ export default function DetailScreen({ task, onBack, onDelete, onToggle, onSave 
           <textarea
             rows={2}
             value={title}
-            onChange={e => setTitle(e.target.value.replace(/\n/g, ''))}
+            onChange={(e) => setTitle(e.target.value.replace(/\n/g, ''))}
             className="resize-none border-b-2 border-tm-divider bg-transparent pb-2.5 text-3xl font-extrabold leading-none tracking-tight text-tm-text caret-tm-accent outline-none focus:border-tm-accent"
           />
         </label>
@@ -56,7 +56,7 @@ export default function DetailScreen({ task, onBack, onDelete, onToggle, onSave 
             rows={5}
             value={desc}
             placeholder="Add details"
-            onChange={e => setDesc(e.target.value)}
+            onChange={(e) => setDesc(e.target.value)}
             className={textarea}
           />
         </label>

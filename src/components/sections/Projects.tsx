@@ -1,27 +1,6 @@
 import { Technology } from '@/types'
 import Section from '../layout/Section'
-import {
-  Css3Original,
-  Html5Original,
-  JavascriptOriginal,
-  NextjsOriginal,
-  ReactOriginal,
-  TailwindcssOriginal,
-  TypescriptOriginal,
-  FlutterOriginal,
-  DartOriginal,
-  NodejsOriginal,
-  ExpressOriginal,
-  PostgresqlOriginal,
-  PrismaOriginal,
-  DockerOriginal,
-  ReactnativeOriginal,
-  ExpoOriginal,
-  VuejsOriginal,
-  ViteOriginal,
-  PythonOriginal,
-  FastapiOriginal,
-} from 'devicons-react'
+import { TECH } from '@/data/technologies'
 import { FiExternalLink } from 'react-icons/fi'
 import SectionTitle from '../ui/SectionTitle'
 import Card from '../ui/Card'
@@ -45,143 +24,53 @@ const itemProject: Project[] = [
     title: 'Ava',
     description: 'ava_description',
     technologies: [
-      { name: 'Python', icon: PythonOriginal },
-      { name: 'FastAPI', icon: FastapiOriginal },
-      { name: 'PostgreSQL', icon: PostgresqlOriginal },
-      { name: 'React', icon: ReactOriginal },
-      { name: 'TypeScript', icon: TypescriptOriginal },
-      { name: 'Vite', icon: ViteOriginal },
-      { name: 'Tailwind CSS', icon: TailwindcssOriginal },
-      { name: 'Docker', icon: DockerOriginal },
+      TECH.python,
+      TECH.fastapi,
+      TECH.postgresql,
+      TECH.react,
+      TECH.typescript,
+      TECH.vite,
+      TECH.tailwind,
+      TECH.docker,
     ],
     githubUrl: 'https://github.com/zywelf/ava-assistant',
   },
   {
     title: 'Vue Store',
     description: 'vue_store_description',
-    technologies: [
-      {
-        name: 'Vue.js',
-        icon: VuejsOriginal,
-      },
-      {
-        name: 'TypeScript',
-        icon: TypescriptOriginal,
-      },
-      {
-        name: 'Vite',
-        icon: ViteOriginal,
-      },
-    ],
+    technologies: [TECH.vue, TECH.typescript, TECH.vite],
     githubUrl: 'https://github.com/zywelf/vue-store',
     liveUrl: 'https://vue-store-umber.vercel.app/',
   },
   {
     title: 'Task Manager APP',
     description: 'task_manager_app_description',
-    technologies: [
-      {
-        name: 'React Native',
-        icon: ReactnativeOriginal,
-      },
-      {
-        name: 'TypeScript',
-        icon: TypescriptOriginal,
-      },
-      {
-        name: 'Expo',
-        icon: ExpoOriginal,
-      },
-    ],
+    technologies: [TECH.reactNative, TECH.typescript, TECH.expo],
     githubUrl: 'https://github.com/zywelf/task-manager-app',
     demoPath: '/projects/task-manager-app',
   },
   {
     title: 'Task Manager API',
-    description: 'task_manager_desciption',
-    technologies: [
-      {
-        name: 'Node.js',
-        icon: NodejsOriginal,
-      },
-      {
-        name: 'Express',
-        icon: ExpressOriginal,
-      },
-      {
-        name: 'TypeScript',
-        icon: TypescriptOriginal,
-      },
-      {
-        name: 'PostgreSQL',
-        icon: PostgresqlOriginal,
-      },
-      {
-        name: 'Prisma',
-        icon: PrismaOriginal,
-      },
-      {
-        name: 'Docker',
-        icon: DockerOriginal,
-      },
-    ],
+    description: 'task_manager_description',
+    technologies: [TECH.nodejs, TECH.express, TECH.typescript, TECH.postgresql, TECH.prisma, TECH.docker],
     githubUrl: 'https://github.com/zywelf/task-manager-api',
   },
   {
     title: 'Portfolio v2',
     description: 'portfolio_v2_description',
-    technologies: [
-      {
-        name: 'React',
-        icon: ReactOriginal,
-      },
-      {
-        name: 'Next.js',
-        icon: NextjsOriginal,
-      },
-      {
-        name: 'TypeScript',
-        icon: TypescriptOriginal,
-      },
-      {
-        name: 'Tailwind CSS',
-        icon: TailwindcssOriginal,
-      },
-    ],
+    technologies: [TECH.react, TECH.nextjs, TECH.typescript, TECH.tailwind],
     githubUrl: 'https://github.com/zywelf/portfolio-v2',
   },
   {
     title: 'Portfolio v1',
     description: 'portfolio_v1_description',
-    technologies: [
-      {
-        name: 'HTML',
-        icon: Html5Original,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Original,
-      },
-      {
-        name: 'JavaScript',
-        icon: JavascriptOriginal,
-      },
-    ],
+    technologies: [TECH.html, TECH.css, TECH.javascript],
     githubUrl: 'https://github.com/zywelf/Portfolio',
   },
   {
     title: 'myBlivion',
     description: 'flutter_description',
-    technologies: [
-      {
-        name: 'Flutter',
-        icon: FlutterOriginal,
-      },
-      {
-        name: 'Dart',
-        icon: DartOriginal,
-      },
-    ],
+    technologies: [TECH.flutter, TECH.dart],
     githubUrl: 'https://github.com/zywelf/myblivion_application',
   },
 ]

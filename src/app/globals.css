@@ -148,6 +148,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Theme switch cross-fade (triggered by ThemeToggle via document.startViewTransition) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
 /* Task Manager demo: its own light/dark palette, set as --tm-* variables by TaskAppDemo */
 @theme inline {
   --color-tm-bg: var(--tm-bg);

@@ -14,7 +14,7 @@ export function useTutorial() {
     startIfNew: () => setStep(finished ? 0 : 1),
     restart: () => setStep(1),
     /** Move on only if the user is on `from`, so actions out of order don't skip steps */
-    advanceFrom: (from: number) => setStep(s => (s === from ? s + 1 : s)),
+    advanceFrom: (from: number) => setStep((s) => (s === from ? s + 1 : s)),
     finish: () => {
       setStep(0)
       setFinished(true)

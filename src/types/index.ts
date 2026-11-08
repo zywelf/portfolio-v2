@@ -9,3 +9,8 @@ export type Technology = {
   name: string
   icon: React.ComponentType<{ size?: number }>
 }
+
+export type Game = {
+  name: string
+  background_image: string
+}

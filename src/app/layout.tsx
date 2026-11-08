@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@/components/layout/ThemeProvider'
 import { JetBrains_Mono } from 'next/font/google'
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -19,12 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="it"
-      suppressHydrationWarning
-      className={jetBrainsMono.variable}
-      data-scroll-behavior="smooth"
-    >
+    <html lang="it" suppressHydrationWarning className={jetBrainsMono.variable} data-scroll-behavior="smooth">
       <body>
         <Analytics />
         <SpeedInsights />

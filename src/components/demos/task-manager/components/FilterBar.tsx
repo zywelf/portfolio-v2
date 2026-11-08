@@ -31,7 +31,7 @@ export default function FilterBar({
   return (
     <>
       <div className="flex h-13 flex-none items-stretch border-b-2 border-tm-divider pl-6">
-        {(Object.keys(FILTER_LABELS) as Filter[]).map(key => (
+        {(Object.keys(FILTER_LABELS) as Filter[]).map((key) => (
           <button
             key={key}
             onClick={() => onFilterChange(key)}
@@ -50,7 +50,7 @@ export default function FilterBar({
           <input
             ref={searchInput}
             value={query}
-            onChange={e => onQueryChange(e.target.value)}
+            onChange={(e) => onQueryChange(e.target.value)}
             placeholder="Search tasks"
             className="h-full min-w-0 flex-1 bg-transparent text-lg text-tm-text outline-none placeholder:text-tm-muted"
           />

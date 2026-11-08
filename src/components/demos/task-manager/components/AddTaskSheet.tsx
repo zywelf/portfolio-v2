@@ -53,8 +53,8 @@ export default function AddTaskSheet({ open, onClose, onAdd }: AddTaskSheetProps
             className={input}
             value={title}
             placeholder="What needs doing?"
-            onChange={e => setTitle(e.target.value)}
-            onKeyDown={e => e.key === 'Enter' && submit()}
+            onChange={(e) => setTitle(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && submit()}
           />
         </label>
         <label className={label}>
@@ -63,7 +63,7 @@ export default function AddTaskSheet({ open, onClose, onAdd }: AddTaskSheetProps
             rows={3}
             value={desc}
             placeholder="Add details"
-            onChange={e => setDesc(e.target.value)}
+            onChange={(e) => setDesc(e.target.value)}
             className={textarea}
           />
         </label>

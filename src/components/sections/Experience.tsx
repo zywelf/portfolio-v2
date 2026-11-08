@@ -1,27 +1,10 @@
-import React from 'react'
 import Section from '../layout/Section'
-import {
-  AmazonwebservicesOriginalWordmark,
-  DjangorestOriginal,
-  DockerOriginal,
-  GitOriginal,
-  NextjsOriginal,
-  PythonOriginal,
-  ReactOriginal,
-  TailwindcssOriginal,
-  TypescriptOriginal,
-  VuejsOriginal,
-  JavascriptOriginal,
-  Html5Original,
-  Css3Original,
-  MysqlOriginal,
-  PostgresqlOriginal,
-} from 'devicons-react'
 import { useTranslations } from 'next-intl'
 import TechBadge from '../ui/TechBadge'
 import Card from '../ui/Card'
 import SectionTitle from '../ui/SectionTitle'
 import { Technology } from '@/types'
+import { TECH } from '@/data/technologies'
 
 type Experience = {
   company: string
@@ -38,62 +21,20 @@ const listExperience: Experience[] = [
     duration: '03/2025 - 02/2026',
     description: 'metriks_bullets',
     technologies: [
-      {
-        name: 'React',
-        icon: ReactOriginal,
-      },
-      {
-        name: 'Next.js',
-        icon: NextjsOriginal,
-      },
-      {
-        name: 'TypeScript',
-        icon: TypescriptOriginal,
-      },
-      {
-        name: 'JavaScript',
-        icon: JavascriptOriginal,
-      },
-      {
-        name: 'HTML',
-        icon: Html5Original,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Original,
-      },
-      {
-        name: 'Vue.js',
-        icon: VuejsOriginal,
-      },
-      {
-        name: 'Tailwind CSS',
-        icon: TailwindcssOriginal,
-      },
-      {
-        name: 'Django',
-        icon: DjangorestOriginal,
-      },
-      {
-        name: 'Postgres',
-        icon: PostgresqlOriginal,
-      },
-      {
-        name: 'Python',
-        icon: PythonOriginal,
-      },
-      {
-        name: 'Docker',
-        icon: DockerOriginal,
-      },
-      {
-        name: 'AWS',
-        icon: AmazonwebservicesOriginalWordmark,
-      },
-      {
-        name: 'Git',
-        icon: GitOriginal,
-      },
+      TECH.react,
+      TECH.nextjs,
+      TECH.typescript,
+      TECH.javascript,
+      TECH.html,
+      TECH.css,
+      TECH.vue,
+      TECH.tailwind,
+      TECH.django,
+      TECH.postgresql,
+      TECH.python,
+      TECH.docker,
+      TECH.aws,
+      TECH.git,
     ],
   },
   {
@@ -101,36 +42,7 @@ const listExperience: Experience[] = [
     role: 'Frontend Developer',
     duration: '01/2022 - 02/2023',
     description: 'giaogiao_bullets',
-    technologies: [
-      {
-        name: 'Vue.js',
-        icon: VuejsOriginal,
-      },
-      {
-        name: 'JavaScript',
-        icon: JavascriptOriginal,
-      },
-      {
-        name: 'HTML',
-        icon: Html5Original,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Original,
-      },
-      {
-        name: 'Python',
-        icon: PythonOriginal,
-      },
-      {
-        name: 'MySQL',
-        icon: MysqlOriginal,
-      },
-      {
-        name: 'Git',
-        icon: GitOriginal,
-      },
-    ],
+    technologies: [TECH.vue, TECH.javascript, TECH.html, TECH.css, TECH.python, TECH.mysql, TECH.git],
   },
 ]
 
@@ -167,7 +79,7 @@ export default function Experience() {
             {/* Tecnologie */}
             <div className="flex flex-wrap gap-2 mt-2">
               {job.technologies.map((item) => (
-                <TechBadge key={item.name} icon={item.icon} name={item.name} size={20} />
+                <TechBadge key={item.name} icon={item.icon} name={item.name} />
               ))}
             </div>
           </Card>

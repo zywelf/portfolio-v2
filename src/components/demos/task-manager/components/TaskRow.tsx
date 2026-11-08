@@ -50,7 +50,7 @@ export default function TaskRow({ task, dx, dragging, swipeHandlers, onToggle }:
       >
         <button
           data-nodrag
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation()
             onToggle()
           }}

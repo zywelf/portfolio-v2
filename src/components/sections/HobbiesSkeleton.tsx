@@ -1,7 +1,5 @@
-'use client'
 import Section from '../layout/Section'
 import SectionTitle from '../ui/SectionTitle'
-import SectionSubtitle from '../ui/SectionSubtitle'
 import { useTranslations } from 'next-intl'
 
 export default function HobbiesSkeleton() {
@@ -10,7 +8,7 @@ export default function HobbiesSkeleton() {
   return (
     <Section id="hobbies">
       <SectionTitle>{t('title')}</SectionTitle>
-      <SectionSubtitle text={t('games')} />
+      <SectionTitle as="h3">{t('games')}</SectionTitle>
       <div className="flex gap-4 overflow-hidden">
         {Array.from({ length: 2 }).map((_, i) => (
           <div key={i} className="basis-1/2 shrink-0">

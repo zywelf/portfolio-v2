@@ -95,7 +95,7 @@ export default function TaskAppDemo() {
     setQuery('')
   }
 
-  const detailTask = tasks.find(t => t.id === detailId)
+  const detailTask = tasks.find((t) => t.id === detailId)
 
   return (
     <div className="box-border w-103.5 rounded-4xl bg-neutral-950 p-3 shadow-2xl">
