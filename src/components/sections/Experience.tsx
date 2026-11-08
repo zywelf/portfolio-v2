@@ -3,48 +3,7 @@ import { useTranslations } from 'next-intl'
 import TechBadge from '../ui/TechBadge'
 import Card from '../ui/Card'
 import SectionTitle from '../ui/SectionTitle'
-import { Technology } from '@/types'
-import { TECH } from '@/data/technologies'
-
-type Experience = {
-  company: string
-  role: string
-  duration: string
-  description: string
-  technologies: Technology[]
-}
-
-const listExperience: Experience[] = [
-  {
-    company: 'Metriks.ai',
-    role: 'Full Stack Developer',
-    duration: '03/2025 - 02/2026',
-    description: 'metriks_bullets',
-    technologies: [
-      TECH.react,
-      TECH.nextjs,
-      TECH.typescript,
-      TECH.javascript,
-      TECH.html,
-      TECH.css,
-      TECH.vue,
-      TECH.tailwind,
-      TECH.django,
-      TECH.postgresql,
-      TECH.python,
-      TECH.docker,
-      TECH.aws,
-      TECH.git,
-    ],
-  },
-  {
-    company: 'GiaoGiao',
-    role: 'Frontend Developer',
-    duration: '01/2022 - 02/2023',
-    description: 'giaogiao_bullets',
-    technologies: [TECH.vue, TECH.javascript, TECH.html, TECH.css, TECH.python, TECH.mysql, TECH.git],
-  },
-]
+import { EXPERIENCES } from '@/data/experience'
 
 export default function Experience() {
   const t = useTranslations('experience')
@@ -53,7 +12,7 @@ export default function Experience() {
     <Section id="experience">
       <SectionTitle>{t('title')}</SectionTitle>
       <div className="flex flex-col gap-6">
-        {listExperience.map((job) => (
+        {EXPERIENCES.map((job) => (
           <Card key={`job-${job.company}`}>
             {/* Header — ruolo, azienda, periodo */}
             <div className="flex items-start justify-between">

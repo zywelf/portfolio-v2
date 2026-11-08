@@ -6,37 +6,7 @@ import Link from 'next/link'
 import TechBadge from '../ui/TechBadge'
 import Card from '../ui/Card'
 import SectionTitle from '../ui/SectionTitle'
-import { Technology } from '@/types'
-import { TECH } from '@/data/technologies'
-
-type SkillCategory = {
-  category: string
-  skills: Technology[]
-}
-
-const aboutItems: SkillCategory[] = [
-  {
-    category: 'Frontend',
-    skills: [
-      TECH.react,
-      TECH.nextjs,
-      TECH.javascript,
-      TECH.typescript,
-      TECH.vue,
-      TECH.tailwind,
-      TECH.html,
-      TECH.css,
-    ],
-  },
-  {
-    category: 'Backend',
-    skills: [TECH.django, TECH.nodejs, TECH.python, TECH.mysql, TECH.postgresql],
-  },
-  {
-    category: 'DevOps',
-    skills: [TECH.docker, TECH.aws, TECH.git],
-  },
-]
+import { SKILLS } from '@/data/skills'
 
 export default function About() {
   const t = useTranslations('about')
@@ -106,7 +76,7 @@ export default function About() {
           {/* Technologies */}
           <div className="flex flex-col gap-4">
             <h3 className="text-lg font-semibold text-foreground">{t('skills_title')}</h3>
-            {aboutItems.map((item) => (
+            {SKILLS.map((item) => (
               <div key={item.category} className="flex flex-col gap-2">
                 <p className="text-xs text-muted-foreground uppercase tracking-widest">{item.category}</p>
                 <div className="flex flex-wrap gap-2">
