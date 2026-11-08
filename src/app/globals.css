@@ -147,3 +147,26 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Task Manager demo: its own light/dark palette, set as --tm-* variables by TaskAppDemo */
+@theme inline {
+  --color-tm-bg: var(--tm-bg);
+  --color-tm-surface: var(--tm-surface);
+  --color-tm-text: var(--tm-text);
+  --color-tm-muted: var(--tm-muted);
+  --color-tm-divider: var(--tm-divider);
+  --color-tm-accent: var(--tm-accent);
+  --color-tm-accent-hover: var(--tm-accent-hover);
+  --color-tm-accent-soft: var(--tm-accent-soft);
+  --color-tm-on-accent: var(--tm-on-accent);
+  --color-tm-danger: var(--tm-danger);
+  --color-tm-highlight: var(--tm-highlight);
+  --font-demo: var(--font-archivo), system-ui, sans-serif;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
