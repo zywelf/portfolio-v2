@@ -54,7 +54,7 @@ export default function About() {
           ))}
         </div>
 
-        <hr className="border-white/10 my-2" />
+        <hr className="dark:border-white/10 border-black/10 my-2" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col gap-3">
             {/* Languages */}
