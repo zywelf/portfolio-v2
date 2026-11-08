@@ -1,13 +1,10 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import { useLocale } from 'next-intl'
-import { usePathname, useRouter } from '../../../i18n/navigation'
-import { useTheme } from 'next-themes'
-import { useState, useEffect } from 'react'
 import { NavItem } from '@/types'
 import MobileMenu from './MobileMenu'
-import { IT, GB } from 'country-flag-icons/react/3x2'
+import LanguageToggle from './LanguageToggle'
+import ThemeToggle from './ThemeToggle'
 
 const navItems: NavItem[] = [
   {
@@ -33,27 +30,7 @@ const navItems: NavItem[] = [
 ]
 
 export default function Navbar() {
-  const locale = useLocale()
-  const router = useRouter()
-  const pathname = usePathname()
   const t = useTranslations('nav')
-  const { resolvedTheme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    // eslint-disable-next-line
-    setMounted(true)
-  }, [])
-
-  const switchTheme = () => {
-    const newTheme = resolvedTheme === 'dark' ? 'light' : 'dark'
-    setTheme(newTheme)
-  }
-
-  const switchLanguage = () => {
-    const newLocale = locale === 'it' ? 'en' : 'it'
-    router.replace(pathname, { locale: newLocale, scroll: false })
-  }
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-6 py-3 rounded-md backdrop-blur-md bg-background/70 border dark:border-white/10 border-black/10 shadow-lg w-auto gap-12">
@@ -74,33 +51,11 @@ export default function Navbar() {
       </div>
 
       <div className="md:flex hidden items-center gap-3">
-        <button
-          type="button"
-          onClick={switchLanguage}
-          className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-        >
-          {locale === 'it' ? <IT className="w-4 h-4" /> : <GB className="w-4 h-4" />}
-          <span>{t('language')}</span>
-        </button>
-        {mounted && (
-          <button
-            type="button"
-            onClick={switchTheme}
-            className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-          >
-            {resolvedTheme === 'dark' ? '☀️' : '🌙'}
-          </button>
-        )}
+        <LanguageToggle className="hover:text-foreground" />
+        <ThemeToggle className="hover:text-foreground" />
       </div>
       <div className="md:hidden flex items-center">
-        <MobileMenu
-          locale={locale}
-          resolvedTheme={resolvedTheme ?? 'dark'}
-          onSwitchLanguage={switchLanguage}
-          onSwitchTheme={switchTheme}
-          mounted={mounted}
-          navItems={navItems}
-        />
+        <MobileMenu navItems={navItems} />
       </div>
     </nav>
   )
