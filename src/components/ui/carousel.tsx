@@ -93,12 +93,16 @@ function Carousel({
 
   React.useEffect(() => {
     if (!api) return
-    onSelect(api)
+    // Embla doesn't emit 'select' on mount: sync the arrow state on the next frame
+    // instead of calling setState synchronously inside the effect
+    const frame = requestAnimationFrame(() => onSelect(api))
     api.on('reInit', onSelect)
     api.on('select', onSelect)
 
     return () => {
-      api?.off('select', onSelect)
+      cancelAnimationFrame(frame)
+      api.off('reInit', onSelect)
+      api.off('select', onSelect)
     }
   }, [api, onSelect])
 
