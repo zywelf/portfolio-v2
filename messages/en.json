@@ -69,7 +69,7 @@
   },
   "contact": {
     "title": "Contact Me",
-    "fullname": "Full name",
+    "fullName": "Full name",
     "email": "Email",
     "cellphone": "Cellphone",
     "message": "Message",
