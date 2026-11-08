@@ -38,7 +38,7 @@ export default async function TaskManagerDemoPage({ params }: Props) {
 
   return (
     <main
-      className={`${archivo.variable} relative flex min-h-screen flex-wrap items-center justify-center gap-[72px] bg-background px-8 pb-14 pt-[88px] text-foreground`}
+      className={`${archivo.variable} relative flex min-h-screen flex-wrap items-center justify-center gap-18 bg-background px-8 pb-14 pt-22 text-foreground`}
     >
       <AppLink
         href="/#projects"
@@ -48,34 +48,30 @@ export default async function TaskManagerDemoPage({ params }: Props) {
         {t('back')}
       </AppLink>
 
-      <section className="flex max-w-[440px] flex-[1_1_320px] flex-col gap-5">
-        <span className="text-xs font-semibold uppercase tracking-[.14em] text-teal-light">
-          {t('kicker')}
-        </span>
-        <h1 className="text-5xl font-extrabold leading-none tracking-[-.03em] sm:text-[56px]">
-          Task Manager
-        </h1>
-        <p className="text-lg leading-[1.55] text-muted-foreground [text-wrap:pretty]">{t('intro')}</p>
+      <section className="flex max-w-110 flex-1 basis-80 flex-col gap-5">
+        <span className="text-xs font-semibold uppercase tracking-widest text-teal-light">{t('kicker')}</span>
+        <h1 className="text-5xl font-extrabold leading-none tracking-tight sm:text-6xl">Task Manager</h1>
+        <p className="text-lg leading-normal text-muted-foreground text-pretty">{t('intro')}</p>
         <div className="flex flex-wrap gap-2">
           {STACK.map((s) => (
-            <span key={s} className="rounded-full border border-border px-3 py-1.5 text-[13px]">
+            <span key={s} className="rounded-full border border-border px-3 py-1.5 text-sm">
               {s}
             </span>
           ))}
         </div>
-        <div className="mt-2 flex flex-col gap-2 rounded-2xl border border-border bg-card px-5 py-[18px]">
-          <span className="text-[15px] font-extrabold">{t('try_title')}</span>
-          <span className="text-[15px] leading-[1.5] text-muted-foreground">{t('try_body')}</span>
+        <div className="mt-2 flex flex-col gap-2 rounded-2xl border border-border bg-card px-5 py-4.5">
+          <span className="text-base font-extrabold">{t('try_title')}</span>
+          <span className="text-base leading-normal text-muted-foreground">{t('try_body')}</span>
         </div>
         <AppLink
           href="https://github.com/zywelf/task-manager-app"
-          className="text-[15px] font-semibold text-teal-light hover:text-teal"
+          className="text-base font-semibold text-teal-light hover:text-teal"
         >
           {t('code')}
         </AppLink>
       </section>
 
-      <div className="flex-none rounded-[56px] shadow-[0_0_0_1px_#2e2e2e,0_0_0_2px_#0a0a0a,0_40px_90px_rgba(45,212,191,.10)]">
+      <div className="flex-none rounded-4xl ring-1 ring-border shadow-2xl shadow-teal-light/10">
         <TaskAppDemo />
       </div>
     </main>
