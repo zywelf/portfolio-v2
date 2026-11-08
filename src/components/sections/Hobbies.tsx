@@ -5,7 +5,6 @@ import Autoplay from 'embla-carousel-autoplay'
 import Section from '../layout/Section'
 import SectionTitle from '../ui/SectionTitle'
 import Image from 'next/image'
-import SectionSubtitle from '../ui/SectionSubtitle'
 import { EmptyState } from './EmptyStateHobbies'
 import type { Game } from '@/types'
 
@@ -19,7 +18,7 @@ export default function Hobbies({ games }: HobbiesProps) {
   return (
     <Section id="hobbies">
       <SectionTitle>{t('title')}</SectionTitle>
-      <SectionSubtitle text={t('games')} />
+      <SectionTitle as="h3">{t('games')}</SectionTitle>
       {games.length === 0 ? (
         <EmptyState />
       ) : (
