@@ -82,5 +82,13 @@
       "tooLong": "Testo troppo lungo",
       "invalidEmail": "Email non valida"
     }
+  },
+  "task_manager_demo": {
+    "back": "Torna ai progetti",
+    "kicker": "App mobile · React Native",
+    "intro": "Un'app per gestire i task, fatta con Expo e TypeScript. Ha login con JWT, gesti di swipe per completare ed eliminare i task, ricerca e filtri, un'intestazione con i progressi, annulla, un tutorial al primo accesso e tema chiaro e scuro.",
+    "try_title": "Provala",
+    "try_body": "Tocca Log in e segui il tutorial. Trascina i task a destra e a sinistra, toccane uno per modificarlo e usa l'icona del sole per cambiare tema. L'app della demo è in inglese.",
+    "code": "Guarda il codice su GitHub →"
   }
 }
