@@ -66,7 +66,6 @@
     "title": "Hobbies",
     "games": "Videogames",
     "unavailable": "Content temporarily unavailable"
-
   },
   "contact": {
     "title": "Contact Me",
@@ -83,5 +82,13 @@
       "tooLong": "Text too long",
       "invalidEmail": "Invalid email"
     }
+  },
+  "task_manager_demo": {
+    "back": "Back to projects",
+    "kicker": "Mobile app · React Native",
+    "intro": "A task app built with Expo and TypeScript. It has JWT login, swipe gestures to complete and delete tasks, search and filters, a progress header, undo, a first-run tutorial, and dark and light themes.",
+    "try_title": "Try it",
+    "try_body": "Tap Log in, then follow the tutorial. Drag tasks left and right, tap one to edit it, and use the sun icon to switch themes.",
+    "code": "View the code on GitHub →"
   }
 }

@@ -28,6 +28,7 @@ import Card from '../ui/Card'
 import { useTranslations } from 'next-intl'
 import TechBadge from '../ui/TechBadge'
 import Link from 'next/link'
+import { Link as LocaleLink } from '../../../i18n/navigation'
 import { FaGithub } from 'react-icons/fa'
 
 type Project = {
@@ -36,6 +37,7 @@ type Project = {
   technologies: Technology[]
   githubUrl: string
   liveUrl?: string
+  demoPath?: string
 }
 
 const itemProject: Project[] = [
@@ -92,6 +94,7 @@ const itemProject: Project[] = [
       },
     ],
     githubUrl: 'https://github.com/zywelf/task-manager-app',
+    demoPath: '/projects/task-manager-app',
   },
   {
     title: 'Task Manager API',
@@ -194,6 +197,15 @@ export default function Projects() {
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
               <div className="flex items-center gap-8">
+                {item.demoPath && (
+                  <LocaleLink
+                    href={item.demoPath}
+                    className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-teal-light transition-colors"
+                  >
+                    <FiExternalLink size={16} aria-hidden="true" />
+                    {t('live_demo')}
+                  </LocaleLink>
+                )}
                 {item.liveUrl && (
                   <Link
                     href={item.liveUrl}

@@ -14,10 +14,12 @@ export async function listGames() {
       try {
         const response = await fetch(`https://api.rawg.io/api/games?key=${api}&search=${name}`, {
           next: { revalidate: 86400 },
+          // Don't let a slow or offline RAWG keep the Hobbies section stuck on the skeleton
+          signal: AbortSignal.timeout(4000),
         })
 
         if (!response.ok) {
-          console.error(`RAWG API error for "${name}": ${response.status}`)
+          console.warn(`RAWG API error for "${name}": ${response.status}`)
           return null
         }
         const data = await response.json()
@@ -32,7 +34,8 @@ export async function listGames() {
           background_image: data.results[0]?.background_image,
         }
       } catch (error) {
-        console.error(`RAWG API error for "${name}":`, error)
+        // warn, not error: RAWG being down is expected and handled by the fallback
+        console.warn(`RAWG API error for "${name}": ${error instanceof Error ? error.message : error}`)
         return null
       }
     })
