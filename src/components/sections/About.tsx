@@ -1,21 +1,3 @@
-import {
-  ReactOriginal,
-  NextjsOriginal,
-  TypescriptOriginal,
-  VuejsOriginal,
-  TailwindcssOriginal,
-  DjangorestOriginal,
-  NodejsOriginal,
-  PythonOriginal,
-  DockerOriginal,
-  GitOriginal,
-  AmazonwebservicesOriginalWordmark,
-  JavascriptOriginal,
-  Html5Original,
-  Css3Original,
-  MysqlOriginal,
-  PostgresqlOriginal,
-} from 'devicons-react'
 import { MapPin, Wifi } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
@@ -25,91 +7,34 @@ import TechBadge from '../ui/TechBadge'
 import Card from '../ui/Card'
 import SectionTitle from '../ui/SectionTitle'
 import { Technology } from '@/types'
+import { TECH } from '@/data/technologies'
 
-type SkillCategoty = {
+type SkillCategory = {
   category: string
   skills: Technology[]
 }
 
-const aboutItems: SkillCategoty[] = [
+const aboutItems: SkillCategory[] = [
   {
     category: 'Frontend',
     skills: [
-      {
-        name: 'React',
-        icon: ReactOriginal,
-      },
-      {
-        name: 'Next.js',
-        icon: NextjsOriginal,
-      },
-      {
-        name: 'JavaScript',
-        icon: JavascriptOriginal,
-      },
-      {
-        name: 'TypeScript',
-        icon: TypescriptOriginal,
-      },
-      {
-        name: 'Vue.js',
-        icon: VuejsOriginal,
-      },
-      {
-        name: 'Tailwind CSS',
-        icon: TailwindcssOriginal,
-      },
-      {
-        name: 'HTML',
-        icon: Html5Original,
-      },
-      {
-        name: 'CSS',
-        icon: Css3Original,
-      },
+      TECH.react,
+      TECH.nextjs,
+      TECH.javascript,
+      TECH.typescript,
+      TECH.vue,
+      TECH.tailwind,
+      TECH.html,
+      TECH.css,
     ],
   },
   {
     category: 'Backend',
-    skills: [
-      {
-        name: 'Django',
-        icon: DjangorestOriginal,
-      },
-      {
-        name: 'Node.js',
-        icon: NodejsOriginal,
-      },
-      {
-        name: 'Python',
-        icon: PythonOriginal,
-      },
-      {
-        name: 'MySQL',
-        icon: MysqlOriginal,
-      },
-      {
-        name: 'PostgreSQL',
-        icon: PostgresqlOriginal,
-      },
-    ],
+    skills: [TECH.django, TECH.nodejs, TECH.python, TECH.mysql, TECH.postgresql],
   },
   {
     category: 'DevOps',
-    skills: [
-      {
-        name: 'Docker',
-        icon: DockerOriginal,
-      },
-      {
-        name: 'AWS',
-        icon: AmazonwebservicesOriginalWordmark,
-      },
-      {
-        name: 'Git',
-        icon: GitOriginal,
-      },
-    ],
+    skills: [TECH.docker, TECH.aws, TECH.git],
   },
 ]
 
