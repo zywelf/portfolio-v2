@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { Metadata } from 'next'
 import { HtmlLangSync } from '@/components/layout/HtmlLangSync'
+import { SITE_URL } from '@/lib/site'
 
 type Props = {
   children: React.ReactNode
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const isIT = locale === 'it'
 
   return {
-    metadataBase: new URL('https://portfolio-v2-three-bay-23.vercel.app'),
+    metadataBase: new URL(SITE_URL),
     title: 'Zywel Fankam | Full Stack Developer',
     description: isIT
       ? 'Full Stack Developer specializzato in React, Next.js e Django. Dal Frontend al Backend, dal pixel al server.'

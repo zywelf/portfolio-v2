@@ -1,10 +1,9 @@
 import type { MetadataRoute } from 'next'
-
-const baseUrl = 'https://portfolio-v2-three-bay-23.vercel.app'
+import { SITE_URL } from '@/lib/site'
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${SITE_URL}/sitemap.xml`,
   }
 }
